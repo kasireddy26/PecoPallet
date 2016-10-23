@@ -1,0 +1,24 @@
+C:\PecoPalletRepo\MyFirstProject\PecoPallet.Data\bin\Debug\PecoPallet.Data.dll
+C:\PecoPalletRepo\MyFirstProject\PecoPallet.Data\bin\Debug\PecoPallet.Data.pdb
+C:\PecoPalletRepo\MyFirstProject\PecoPallet.Data\obj\Debug\PecoPallet.Data.dll
+C:\PecoPalletRepo\MyFirstProject\PecoPallet.Data\obj\Debug\PecoPallet.Data.pdb
+C:\Arun\1407\PecoPallet.Data\bin\Debug\PecoPallet.Data.dll
+C:\Arun\1407\PecoPallet.Data\bin\Debug\PecoPallet.Data.pdb
+C:\Arun\1407\PecoPallet.Data\obj\Debug\PecoPallet.Data.csprojResolveAssemblyReference.cache
+C:\Arun\1407\PecoPallet.Data\obj\Debug\PecoPallet.Data.dll
+C:\Arun\1407\PecoPallet.Data\obj\Debug\PecoPallet.Data.pdb
+F:\ArunSharath\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.dll
+F:\ArunSharath\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.pdb
+F:\ArunSharath\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.csprojResolveAssemblyReference.cache
+F:\ArunSharath\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.dll
+F:\ArunSharath\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.pdb
+F:\Peco Drive\0725\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.csprojResolveAssemblyReference.cache
+F:\Peco Drive\0725\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.dll
+F:\Peco Drive\0725\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.pdb
+F:\Peco Drive\0725\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.dll
+F:\Peco Drive\0725\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.pdb
+D:\Projects\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.dll
+D:\Projects\PicoPallet\PecoPallet.Data\bin\Debug\PecoPallet.Data.pdb
+D:\Projects\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.csprojResolveAssemblyReference.cache
+D:\Projects\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.dll
+D:\Projects\PicoPallet\PecoPallet.Data\obj\Debug\PecoPallet.Data.pdb

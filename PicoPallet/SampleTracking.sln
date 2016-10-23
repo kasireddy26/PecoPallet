@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTracking", "SampleTracking\SampleTracking.csproj", "{D67342B3-8B86-4470-A410-9BCCAD94DE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PecoPallet.Data", "PecoPallet.Data\PecoPallet.Data.csproj", "{08C8FA68-53A1-42C8-AFC0-5613DADF7C50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67342B3-8B86-4470-A410-9BCCAD94DE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67342B3-8B86-4470-A410-9BCCAD94DE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67342B3-8B86-4470-A410-9BCCAD94DE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67342B3-8B86-4470-A410-9BCCAD94DE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C8FA68-53A1-42C8-AFC0-5613DADF7C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C8FA68-53A1-42C8-AFC0-5613DADF7C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C8FA68-53A1-42C8-AFC0-5613DADF7C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C8FA68-53A1-42C8-AFC0-5613DADF7C50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

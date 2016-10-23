@@ -1,0 +1,38 @@
+﻿<div id="main" role="main">
+    <div id="content" class="container">
+        <div class="row">
+            <script type="text/ng-template" id="myModalContent.html">
+            <!--<div class="modal-header">
+                <h3 class="modal-title">{{ childchartheader }}</h3>
+            </div>-->
+            <div class="modal-body">
+                <div id="pie123"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+            </div>
+        </script>
+            <div  id="content_left_double" style="width: 590px; padding: 0 43px 0 0; margin-left: 22px;">
+                <div id="pie"></div>
+            </div>
+            <div style="color:black;">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Online Portal name</th>
+                            <th>Sales%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in pieChartInitData">
+                            <td>{{item.label}}</td>
+                            <td>{{item.value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

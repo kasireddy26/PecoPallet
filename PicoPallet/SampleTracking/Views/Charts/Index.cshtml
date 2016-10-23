@@ -1,0 +1,270 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_MLayoutPage.cshtml";
+}
+
+
+
+<!--  PAPER WRAP -->
+<div class="wrap-fluid" ng-app="myApp1" ng-controller="myCtrl">
+    <div class="container-fluid paper-wrap bevel tlbr">
+
+
+        <!-- CONTENT -->
+        <!--TITLE -->
+        <div class="row">
+            <div id="paper-top">
+
+                <div class="col-sm-3">
+                    <h2 class="tittle-content-header">
+                        <i class="icon-window"></i>
+                        <span>
+                            Dashboard
+                        </span>
+                    </h2>
+                </div>
+                <div class="col-sm-9">
+                    <div class="devider-vertical visible-lg"></div>
+                    <div class="tittle-middle-header">
+                        <div class="alert">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <span class="tittle-alert entypo-info-circled"></span>
+                            Welcome back,&nbsp;
+                            <strong></strong>&nbsp;&nbsp;
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/ TITLE -->
+        <!-- BREADCRUMB -->
+        <ul id="breadcrumb" style="margin:10px;">
+            <li>
+                <span class="entypo-home"></span>
+            </li>
+            <li>
+                <i class="fa fa-lg fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="#" title="Sample page 1">Home</a>
+            </li>
+            <li>
+                <i class="fa fa-lg fa-angle-right"></i>
+            </li>
+            <li>
+                <a href="#" title="Sample page 1">Charts</a>
+            </li>
+        </ul>
+
+        <!-- END OF BREADCRUMB -->
+        <!-- Map Container -->
+        <div id="paper-middle" style="height:500px;">
+
+            <div class="row">
+                <script type="text/ng-template" id="myModalContent.html">
+                    <!--<div class="modal-header">
+                <h3 class="modal-title">{{ childchartheader }}</h3>
+            </div>-->
+                    <div class="modal-body">
+                        <div id="pie123"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                        <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+                    </div>
+                </script>
+                <div id="content_left_double" style="width: 590px; padding: 0 43px 0 0; margin-left: 0px;">
+                    <div id="pie"></div>
+                </div>
+                <div style="color:black;margin-left: 20px;">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Online Portal name</th>
+                                <th>Sales%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in pieChartInitData">
+                                <td>{{item.label}}</td>
+                                <td>{{item.value}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!--End of  Map Container -->
+
+
+    </div>
+</div>
+<!--  END OF PAPER WRAP -->
+
+
+
+<script>
+    var app1 = angular.module('myApp1', ['ui.bootstrap']);
+        app1.controller('myCtrl', ['$scope', '$location', '$uibModal', function ($scope, $location,  $uibModal) {
+
+        $scope.pieChartInitData = [];
+        alert('hi');
+        $.ajax({
+            url: 'http://localhost:5279/Data/PieChartData',
+            dataType: 'json',
+            cache: false,
+            success: function (resp) {
+                //alert('ajax success');
+                //console.log(data);
+                //debugger;
+                //var pieChartInitData = [
+                //            { label: "Amazon", value: 55 },
+                //            { label: "Staples", value: 15 },
+                //            { label: "BestBuy", value: 20 },
+                //            { label: "Walmart", value: 10 },
+                //];
+                $scope.pieChartInitData = resp.data;
+                //debugger;
+
+                var pie = new d3pie(document.getElementById('pie'), {
+                    header: {
+                        title: {
+                            text: "Online sales for year 2015",
+                            fontSize: 20
+                        }
+                    },
+                    data: {
+                        content: $scope.pieChartInitData
+                    },
+                    callbacks: {
+                        onClickSegment: function (a) {
+                            $scope.open(a);
+                            $scope.childchartheader = a.data.label;
+                        }
+                    }
+                });
+
+            },
+            error: function (xhr, status, err) {
+                debugger;
+                alert('error:' + err);
+            }
+        });
+
+
+        //$scope.authentication = authService.authentication;
+        $scope.items = ['item1', 'item2', 'item3'];
+        $scope.animationsEnabled = true;
+
+        $scope.open = function (chartData) {
+            var size;
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'myModalContent.html',
+                controller: 'ModalInstanceCtrl',
+                size: size,
+                resolve: {
+                    items: function () {
+                        return $scope.items;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.selected = selectedItem;
+            }, function () {
+                //$log.info('Modal dismissed at: ' + new Date());
+                console.log('Modal dismissed at: ');
+            });
+
+            setTimeout(function () { loadChildChartfunc(chartData); }, 500);
+
+        };
+
+        function loadChildChartfunc(chartData) {
+
+            var amchildchartdata = [
+                        { label: "Pallet type 1", value: 10 },
+                        { label: "Pallet type 2", value: 40 },
+                        { label: "Pallet type 3", value: 25 },
+                        { label: "Pallet type 4", value: 5 },
+                        { label: "Pallet type 5", value: 20 }
+            ];
+            var stchildchartdata = [
+                        { label: "Pallet type 1", value: 33 },
+                        { label: "Pallet type 2", value: 45 },
+                        { label: "Pallet type 3", value: 5 },
+                        { label: "Pallet type 4", value: 22 }
+            ];
+            var bbchildchartdata = [
+                        { label: "Pallet type 1", value: 15 },
+                        { label: "Pallet type 2", value: 85 }
+            ];
+            var wmchildchartdata = [
+                        { label: "Pallet type 1", value: 33 },
+                        { label: "Pallet type 2", value: 34 },
+                        { label: "Pallet type 3", value: 33 }
+            ];
+
+            var childchartdata = null;
+            if (chartData.data.label == "Amazon") {
+                childchartdata = amchildchartdata;
+            }
+            else if (chartData.data.label == "Staples") {
+                childchartdata = stchildchartdata;
+            }
+            else if (chartData.data.label == "BestBuy") {
+                childchartdata = bbchildchartdata;
+            }
+            else if (chartData.data.label == "Walmart") {
+                childchartdata = wmchildchartdata;
+            }
+
+            //pie2.
+            var pie123 = new d3pie(document.getElementById('pie123'), {
+                header: {
+                    title: {
+                        text: chartData.data.label + ' sales per item',
+                        fontSize: 20
+                    }
+                },
+                data: {
+                    content: childchartdata
+                }
+            });
+        }
+
+        $scope.toggleAnimation = function () {
+            $scope.animationsEnabled = !$scope.animationsEnabled;
+        };
+
+        angular.element(document).ready(function () {
+            //alert('hi');
+            //getMap('myMap');
+            //loadClusterModule($scope.loadLocations, $scope.saveLocation);
+        });
+
+    }]);
+
+    app1.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+        $scope.items = items;
+        $scope.selected = {
+            item: $scope.items[0]
+        };
+        $scope.ok = function () {
+            $uibModalInstance.close($scope.selected.item);
+        };
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
+    });
+    
+
+
+
+</script>
+

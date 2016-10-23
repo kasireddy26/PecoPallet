@@ -1,0 +1,45 @@
+﻿<div class="row">
+    <div id="paper-top">
+        <div class="col-sm-3">
+            <h2 class="tittle-content-header">
+                <i class="icon-window"></i>
+                <span>
+                    Search by Zipcode
+                </span>
+            </h2>
+        </div>
+        <div class="col-sm-9">
+            <div class="devider-vertical visible-lg"></div>
+            <div class="tittle-middle-header">
+                <div class="alert">
+                    <span class="tittle-alert entypo-info-circled"></span>
+                    Write something about zipcode&nbsp;
+                    <strong></strong>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="breadcrumb" style="margin:10px;">
+    <li>
+        <a href="#/">
+            <span class="entypo-home"></span>
+        </a>
+    </li>
+    <li>
+        <i class="fa fa-lg fa-angle-right"></i>
+    </li>
+    <li>
+        <a  title="Sample page 1">Search by Zipcode</a>
+    </li>
+</ul>
+Enter zip code: <input type="text" style="color:black;" ng-model="txtSearch" />&nbsp;
+<input type="button" value="Search" ng-click="GetGeoFence()" />
+<br /><br />
+<ul></ul>
+
+<div id="myMap" style="position:relative; width:100%; height:500px;" ng-init="InitMap()"></div>
+
+<script>
+
+</script>

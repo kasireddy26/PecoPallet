@@ -1,0 +1,51 @@
+﻿    <div id="main" role="main">
+
+        <!-- MAIN CONTENT -->
+        <div id="content" class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 hidden-xs hidden-sm">
+                    <h1 class="txt-color-red login-header-big">Register</h1>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <h5 class="about-heading">Built-In Quality</h5>
+                            <p>
+                                We start by manufacturing top quality pallets. We use only high-quality #2 grade Douglas Fir and Southern Yellow Pine lumber that is responsibly forested in North America. Pallets are kiln-dried to prevent infestation, mold, and moisture. No chemical treatments or hazardous materials are ever used on PECO pallets.
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <h5 class="about-heading">Block Pallets: The Better Choice</h5>
+                            <p>
+                                PECO’s block pallets are much stronger and more durable than conventional stringer pallets. Our standard GMA (48”x40”) pallets are designed to hold up to 2,800-pound loads (edge-rackable)
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="well no-padding">
+                        <form class="form-login" role="form">
+                            <h2 class="form-login-heading">Sign up</h2>
+                            <input type="text" class="form-control" placeholder="Firstname" data-ng-model="registration.FirstName" required autofocus />
+                            <input type="text" class="form-control" placeholder="Lastname" data-ng-model="registration.LastName" required />
+                            <input type="text" class="form-control" placeholder="Email" data-ng-model="registration.Email" required />
+                            <input type="password" class="form-control" placeholder="Password" data-ng-model="registration.Password" required />
+                            <input type="password" class="form-control" placeholder="Confirm Password" data-ng-model="registration.confirmPassword" required />
+                            <input type="text" class="form-control" placeholder="Displayname" data-ng-model="registration.DisplayName" required />
+                            <input type="text" class="form-control" placeholder="Companyname" data-ng-model="registration.CompanyName" required />
+                            <input type="text" class="form-control" placeholder="Phone number" data-ng-model="registration.PhoneNum" required />
+                            <button class="btn btn-lg btn-info btn-block" type="submit" data-ng-click="signUp()">Submit</button>
+                            <div data-ng-hide="message == ''" data-ng-class="(savedSuccessfully) ? 'alert alert-success' : 'alert alert-danger'">
+                                {{message}}
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+

@@ -1,0 +1,446 @@
+D:\Projects\SampleTracking\SampleTracking\bin\ApplicationInsights.config
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\csc.exe
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\vbc.exe
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\VBCSCompiler.exe
+D:\Projects\SampleTracking\SampleTracking\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\SampleTracking\SampleTracking\bin\SampleTracking.dll.config
+D:\Projects\SampleTracking\SampleTracking\bin\SampleTracking.dll
+D:\Projects\SampleTracking\SampleTracking\bin\SampleTracking.pdb
+D:\Projects\SampleTracking\SampleTracking\bin\Antlr3.Runtime.dll
+D:\Projects\SampleTracking\SampleTracking\bin\EntityFramework.dll
+D:\Projects\SampleTracking\SampleTracking\bin\EntityFramework.SqlServer.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.Web.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Newtonsoft.Json.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Owin.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Net.Http.Formatting.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Helpers.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Http.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Http.WebHost.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Mvc.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Optimization.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Razor.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.dll
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.Razor.dll
+D:\Projects\SampleTracking\SampleTracking\bin\WebGrease.dll
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.Web.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Helpers.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Mvc.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Optimization.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Razor.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.WebPages.Razor.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Antlr3.Runtime.pdb
+D:\Projects\SampleTracking\SampleTracking\bin\Newtonsoft.Json.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Net.Http.Formatting.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Http.xml
+D:\Projects\SampleTracking\SampleTracking\bin\System.Web.Http.WebHost.xml
+D:\Projects\SampleTracking\SampleTracking\bin\EntityFramework.xml
+D:\Projects\SampleTracking\SampleTracking\bin\EntityFramework.SqlServer.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\SampleTracking\SampleTracking\obj\Debug\SampleTracking.csprojResolveAssemblyReference.cache
+D:\Projects\SampleTracking\SampleTracking\obj\Debug\SampleTracking.dll
+D:\Projects\SampleTracking\SampleTracking\obj\Debug\SampleTracking.pdb
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\ApplicationInsights.config
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\csc.exe
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\System.Collections.Immutable.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\System.Reflection.Metadata.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\vbc.exe
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\VBCSCompiler.exe
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\roslyn\VBCSCompiler.exe.config
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\SampleTracking.dll.config
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\SampleTracking.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\SampleTracking.pdb
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Antlr3.Runtime.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\EntityFramework.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\EntityFramework.SqlServer.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.DependencyCollector.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.Web.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.WindowsServer.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.ApplicationInsights.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Core.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Cookies.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Facebook.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Google.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.OAuth.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Twitter.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Web.Infrastructure.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Newtonsoft.Json.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Owin.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Net.Http.Formatting.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Helpers.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Http.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Http.WebHost.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Mvc.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Optimization.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Razor.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.Deployment.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.Razor.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\WebGrease.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.DependencyCollector.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.Web.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AI.WindowsServer.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.ApplicationInsights.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Helpers.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Mvc.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Optimization.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Razor.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.Deployment.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.WebPages.Razor.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Antlr3.Runtime.pdb
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Newtonsoft.Json.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Net.Http.Formatting.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Http.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\System.Web.Http.WebHost.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\EntityFramework.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\EntityFramework.SqlServer.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Core.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Facebook.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Cookies.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.OAuth.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Google.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.Twitter.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\obj\Debug\SampleTracking.csprojResolveAssemblyReference.cache
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\obj\Debug\SampleTracking.dll
+F:\v-rajuk\Old code\SampleTracking\SampleTracking\obj\Debug\SampleTracking.pdb
+F:\ArunSharath\PicoPallet\SampleTracking\bin\ApplicationInsights.config
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\csc.exe
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\System.Collections.Immutable.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\System.Reflection.Metadata.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\vbc.exe
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe
+F:\ArunSharath\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe.config
+F:\ArunSharath\PicoPallet\SampleTracking\bin\SampleTracking.dll.config
+F:\ArunSharath\PicoPallet\SampleTracking\bin\SampleTracking.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\SampleTracking.pdb
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Antlr3.Runtime.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\EntityFramework.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Web.Infrastructure.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Newtonsoft.Json.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Owin.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Helpers.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Http.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Mvc.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Optimization.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Razor.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\WebGrease.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Helpers.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Mvc.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Optimization.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Razor.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Antlr3.Runtime.pdb
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Newtonsoft.Json.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Http.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\EntityFramework.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.xml
+F:\ArunSharath\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\ArunSharath\PicoPallet\SampleTracking\obj\Debug\SampleTracking.csprojResolveAssemblyReference.cache
+F:\ArunSharath\PicoPallet\SampleTracking\obj\Debug\SampleTracking.dll
+F:\ArunSharath\PicoPallet\SampleTracking\obj\Debug\SampleTracking.pdb
+F:\ArunSharath\PicoPallet\SampleTracking\bin\PecoPallet.Data.dll
+F:\ArunSharath\PicoPallet\SampleTracking\bin\PecoPallet.Data.pdb
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\ApplicationInsights.config
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\csc.exe
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\System.Collections.Immutable.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\System.Reflection.Metadata.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\vbc.exe
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe.config
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\SampleTracking.dll.config
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\SampleTracking.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\SampleTracking.pdb
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Antlr3.Runtime.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\EntityFramework.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Web.Infrastructure.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Newtonsoft.Json.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Owin.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\PecoPallet.Data.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Helpers.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Http.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Mvc.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Optimization.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Razor.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\WebGrease.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\PecoPallet.Data.pdb
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Helpers.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Mvc.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Optimization.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Razor.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Antlr3.Runtime.pdb
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Newtonsoft.Json.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Http.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\EntityFramework.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Peco Drive\0725\PicoPallet\SampleTracking\obj\Debug\SampleTracking.csprojResolveAssemblyReference.cache
+F:\Peco Drive\0725\PicoPallet\SampleTracking\obj\Debug\SampleTracking.dll
+F:\Peco Drive\0725\PicoPallet\SampleTracking\obj\Debug\SampleTracking.pdb
+D:\Projects\PicoPallet\SampleTracking\bin\ApplicationInsights.config
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\csc.exe
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\vbc.exe
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe
+D:\Projects\PicoPallet\SampleTracking\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\PicoPallet\SampleTracking\bin\SampleTracking.dll.config
+D:\Projects\PicoPallet\SampleTracking\bin\SampleTracking.dll
+D:\Projects\PicoPallet\SampleTracking\bin\SampleTracking.pdb
+D:\Projects\PicoPallet\SampleTracking\bin\Antlr3.Runtime.dll
+D:\Projects\PicoPallet\SampleTracking\bin\EntityFramework.dll
+D:\Projects\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Newtonsoft.Json.dll
+D:\Projects\PicoPallet\SampleTracking\bin\Owin.dll
+D:\Projects\PicoPallet\SampleTracking\bin\PecoPallet.Data.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Helpers.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Http.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Mvc.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Optimization.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Razor.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.dll
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.dll
+D:\Projects\PicoPallet\SampleTracking\bin\WebGrease.dll
+D:\Projects\PicoPallet\SampleTracking\bin\PecoPallet.Data.pdb
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.DependencyCollector.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.Web.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AI.WindowsServer.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.ApplicationInsights.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Helpers.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Mvc.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Optimization.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Razor.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.WebPages.Razor.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Antlr3.Runtime.pdb
+D:\Projects\PicoPallet\SampleTracking\bin\Newtonsoft.Json.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Net.Http.Formatting.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Http.xml
+D:\Projects\PicoPallet\SampleTracking\bin\System.Web.Http.WebHost.xml
+D:\Projects\PicoPallet\SampleTracking\bin\EntityFramework.xml
+D:\Projects\PicoPallet\SampleTracking\bin\EntityFramework.SqlServer.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Google.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Projects\PicoPallet\SampleTracking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Projects\PicoPallet\SampleTracking\obj\Debug\SampleTracking.csprojResolveAssemblyReference.cache
+D:\Projects\PicoPallet\SampleTracking\obj\Debug\SampleTracking.dll
+D:\Projects\PicoPallet\SampleTracking\obj\Debug\SampleTracking.pdb

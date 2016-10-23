@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SampleTracking.Custom.UserDTO>
+@using SampleTracking.Custom;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div style="font-family:Arial"> 
+
+        <ul>
+            @foreach (UserDTO userdto in @Model)
+            {
+                <li>
+                    @Html.ActionLink(userdto.FirstName, "Details", new { id = userdto.UserID });
+                </li>
+            }
+           
+
+        </ul>
+    </div>
+</body>
+</html>

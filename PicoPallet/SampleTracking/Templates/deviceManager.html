@@ -1,0 +1,33 @@
+﻿<div id="main" role="main">
+    <div id="content" class="container">
+        <div class="row">
+            <script type="text/ng-template" id="devmngrModalContent.html">
+             <div class="modal-header">
+                <h3 class="modal-title">{{ items.devname }}</h3>
+            </div>
+            <div class="modal-body" style="color:black;">
+             <b>Device Id:</b> {{items.devid}}
+             <br />
+             <b>Device Name:</b> {{items.devname}}
+             <br />
+             <b>Location:</b> {{items.locationname}}&nbsp;&nbsp;<a ng-click="showMap()">Show map</a>
+             <br />
+             <br />
+             <div id="dmMap" ng-if="showmap">
+                <div id='mapdiv1' ng-init="getMap()" style="position: relative; width: 550px; height: 400px;"></div>
+             </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+            </div>
+        </script>
+
+            <div style="margin-top: 0px; margin-left: 22px; color: black">
+                <h3>Device Manager</h3>
+                <input style="color:black;" placeholder="Filter..." type="text" ng-model="txtSearch" ng-change="txtchange()" />
+                <div id="myGrid" style="height: 100%;" class="ag-fresh"></div>
+            </div>
+        </div>
+    </div>
+</div>

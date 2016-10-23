@@ -1,0 +1,492 @@
+﻿@using Microsoft.AspNet.Identity
+@using SampleTracking.UserScope;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="/content/DrawingToolsModule.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+
+    <script src="~/Content/js/progress-bar/src/jquery.velocity.min.js"></script>
+    <script src="~/Content/js/progress-bar/number-pb.js"></script>
+    <script src="~/Content/js/progress-bar/progress-app.js"></script>
+
+    <!-- MAIN EFFECT -->
+    <script type="text/javascript" src="~/Content/js/preloader.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Content/js/app.js"></script>
+    <script type="text/javascript" src="~/Content/js/load.js"></script>
+    <script type="text/javascript" src="~/Content/js/main.js"></script>
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/angular-cookies.min.js"></script>
+    <script src="~/Scripts/angular-sanitize.min.js"></script>
+    <script src="~/Scripts/ui-bootstrap-tpls-0.14.3.js"></script>
+    @*<script src="~/Scripts/angular-local-storage.min.js"></script>
+    <script src="~/Scripts/loading-bar.min.js"></script>
+    
+    <script src="~/Scripts/angular-translate.min.js"></script>
+    <script src="~/Scripts/angular-translate-storage-cookie.min.js"></script>
+    <script src="~/Scripts/angular-translate-loader-static-files.min.js"></script>*@
+    <script src="~/Scripts/ag-grid.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="~/Scripts/d3pie.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="~/Scripts/datamaps.usa.min.js"></script>
+    <script src="~/Content/js/jhere-custom.js"></script>
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+    <script src="~/App/PecoApp.js"></script>
+    <script src="~/App/Factory/mapsFactory.js"></script>
+    <script src="~/App/testhome2cntrl.js"></script>
+    <script src="~/App/Dashboard/dashboardcntrl.js"></script>
+    <script src="~/App/Charts/chartscntrl.js"></script>
+    <script src="~/App/DeviceManager/deviceMngrcntrl.js"></script>
+    <script src="~/App/Maps/notificationCntrl.js"></script>
+    <script src="~/App/Maps/routemapCntrl.js"></script>
+    <script src="~/App/Maps/pushpinbyZipCntrl.js"></script>
+
+</head>
+<body>
+    <div>
+
+        <link rel="stylesheet" href="~/Content/css/style.css">
+        <link rel="stylesheet" href="~/Content/css/loader-style.css">
+        <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/js/progress-bar/number-pb.css">
+
+        <style type="text/css">
+            canvas#canvas4 {
+                position: relative;
+                top: 20px;
+            }
+
+
+        </style>
+
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- TOP NAVBAR -->
+        <nav role="navigation" class="navbar navbar-static-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                        <span class="entypo-menu"></span>
+                    </button>
+                    <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                        <span class="entypo-list-add"></span>
+                    </button>
+
+
+                    <div id="logo-mobile" class="visible-xs">
+                        <h1>
+                            Peco Pallet
+
+                        </h1>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">23</div></a>
+
+                            <ul style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap">
+                                <li>
+                                    <a href="#">
+                                        <img alt="" class="img-msg img-circle" src="">Jhon Doe <b>Just Now</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <img alt="" class="img-msg img-circle" src="">Jeniffer <b>3 Min Ago</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <img alt="" class="img-msg img-circle" src="">Dave <b>2 Hours Ago</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <img alt="" class="img-msg img-circle" src=""><i>Keanu</i>  <b>1 Day Ago</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <img alt="" class="img-msg img-circle" src=""><i>Masashi</i>  <b>2 Mounth Ago</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div>See All Messege</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:19px;" class="icon-warning tooltitle"></i><div class="noft-green">5</div></a>
+                            <ul style="margin: 12px 0 0 0;" role="menu" class="dropdown-menu dropdown-wrap">
+                                <li>
+                                    <a href="#">
+                                        <span style="background:#DF2135"></span><i>Test Notification</i>  <b>01B</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <span style="background:#AB6DB0"></span><i>Test Notification</i>  <b>9:00 AM</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <span style="background:#FFA200"></span><i>Test Notification</i>  <b>09 Min</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <span style="background:#86C440"></span><i>Test Notification</i>  <b>08:30 AM</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <span style="background:#0DB8DF"></span><i>Test Notification</i>  <b>08:30 AM</b>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div>See All Notification</div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="time">
+
+                        </li>
+
+                    </ul>
+
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                            <li>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <img alt="" class="admin-pic img-circle" src="">Hi, @User.Identity.GetUserName()  <b class="caret"></b>
+                                </a>
+                                <ul style="margin-top:14px;" role="menu" class="dropdown-setting dropdown-menu">
+                                    <li>
+                                        <a href="#">
+                                            <span class="entypo-user"></span>&#160;&#160;My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="entypo-vcard"></span>&#160;&#160;Account Setting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="entypo-lifebuoy"></span>&#160;&#160;Help
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li style="text-align:center;">
+                                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <span class="entypo-logout"></span>&#160;&#160;Logout
+                                            </a>
+                                        }
+                                    </li>
+                                </ul>
+
+
+                            </li>
+
+                            <li>
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                    <span class="icon-gear"></span>&#160;&#160;Themes
+                                </a>
+                                <ul role="menu" class="dropdown-setting dropdown-menu">
+                                    <li class="theme-bg">
+                                        <div id="button-bg"></div>
+                                        <div id="button-bg2"></div>
+                                        <div id="button-bg3"></div>
+                                        <div id="button-bg5"></div>
+                                        <div id="button-bg6"></div>
+                                        <div id="button-bg7"></div>
+                                        <div id="button-bg8"></div>
+                                        <div id="button-bg9"></div>
+                                        <div id="button-bg10"></div>
+                                        <div id="button-bg11"></div>
+                                        <div id="button-bg12"></div>
+                                        <div id="button-bg13"></div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"><i data-toggle="tooltip" data-placement="bottom" title="Help" style="font-size:20px;" class="icon-help tooltitle"></i></a>
+                            </li>
+                        </ul>
+
+                    }
+
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- /END OF TOP NAVBAR -->
+        <!-- SIDE MENU -->
+        <div id="skin-select">
+            <div id="logo">
+                <h1>
+                    Peco Pallet
+                    <span>v1.0</span>
+                </h1>
+            </div>
+            <a id="toggle">
+                <span class="entypo-menu"></span>
+            </a>
+            <div class="dark">
+                <form action="#">
+                    <span>
+                        <input type="text" name="search" value="" class="search rounded id_search" placeholder="Search Menu..." autofocus />
+                    </span>
+                </form>
+            </div>
+            <div class="search-hover">
+                <form id="demo-2">
+                    <input type="search" placeholder="Search Menu..." class="id_search">
+                </form>
+            </div>
+
+
+            <div class="skin-part">
+                <div id="tree-wrap">
+                    <div class="side-bar">
+
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/" title="Track">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/charts" title="Track">
+                                    <span>Charts</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/devicemngr" title="Track">
+                                    <span>Device Manager</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/notifications" title="Track">
+                                    <span>Notifications</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/routemap" title="Track">
+                                    <span>Route Map</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="topnav menu-left-nest">
+                            <li>
+                                <a class="tooltip-tip ajax-load" href="#/pinbyzip" title="Track">
+                                    <span>Search by Zipcode</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        @{if (ViewContext.Controller.HasPermission("TRK"))
+                            {
+
+
+
+                                <ul class="topnav menu-left-nest">
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="/Maps/Test" title="Track">
+
+                                            <span>Track</span>
+                                        </a>
+
+                                    </li>
+                                </ul>
+
+                            }}
+
+
+
+                        <ul class="topnav menu-left-nest">
+
+
+
+
+                            @{if (ViewContext.Controller.HasPermission("CRTUSR"))
+                                {
+
+
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="/Maps/CreateUser" title="New User">
+
+                                            <span>Add New User</span>
+                                        </a>
+                                    </li>
+
+                                }}
+
+
+                            @{if (ViewContext.Controller.HasPermission("USRINDX"))
+                                {
+
+
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="/AppUser/Index" title="List User">
+
+                                            <span>User Index</span>
+                                        </a>
+                                    </li>
+
+                                }}
+
+
+                            @{if (ViewContext.Controller.HasPermission("VIEWROLES"))
+                                {
+
+
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="/AppUser/Roles" title="List Roles">
+
+                                            <span>View Roles</span>
+                                        </a>
+                                    </li>
+
+                                }}
+
+                            @{if (ViewContext.Controller.HasPermission("CRTROLES"))
+                                {
+
+
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="/AppUser/CreateRole" title="Create Roles">
+
+                                            <span>Create  Roles</span>
+                                        </a>
+                                    </li>
+
+                                }}
+
+
+
+
+
+                            @{if (ViewContext.Controller.HasPermission("PLCY"))
+                                {
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="#" title="Pallet">
+
+                                            <span>Pallet Life Cycle</span>
+
+                                        </a>
+                                    </li>
+
+
+
+
+                                }}
+
+
+
+                            @{if (ViewContext.Controller.HasPermission("NTFS"))
+                                {
+
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="#" title="Pallet">
+
+                                            <span>Notification</span>
+
+                                        </a>
+                                    </li>
+
+
+
+
+                                }}
+                        </ul>
+
+
+
+
+
+                        <ul id="menu-showhide" class="topnav menu-left-nest">
+
+
+
+
+
+
+                            @{if (ViewContext.Controller.HasPermission("DVMNG"))
+                                {
+                                    <li>
+                                        <a class="tooltip-tip ajax-load" href="#" title="Map">
+
+                                            <span>Device Manager</span>
+                                        </a>
+                                    </li>
+
+                                } }
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF SIDE MENU -->
+        @RenderBody()
+
+
+
+    </div>
+</body>
+</html>

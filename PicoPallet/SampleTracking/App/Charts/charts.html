@@ -1,0 +1,70 @@
+﻿<div class="row">
+    <div id="paper-top">
+        <div class="col-sm-3">
+            <h2 class="tittle-content-header">
+                <i class="icon-window"></i>
+                <span>
+                    Charts
+                </span>
+            </h2>
+        </div>
+        <div class="col-sm-9">
+            <div class="devider-vertical visible-lg"></div>
+            <div class="tittle-middle-header">
+                <div class="alert">
+                    <span class="tittle-alert entypo-info-circled"></span>
+                    Write something about Charts.....&nbsp;
+                    <strong></strong>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="breadcrumb" style="margin:10px;">
+    <li>
+        <a href="#/">
+            <span class="entypo-home"></span>
+        </a>
+    </li>
+    <li>
+        <i class="fa fa-lg fa-angle-right"></i>
+    </li>
+    <li>
+        <a href="#" title="Sample page 1">Charts</a>
+    </li>
+</ul>
+
+<div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <!--<div class="modal-header">
+            <h3 class="modal-title">{{ childchartheader }}</h3>
+        </div>-->
+        <div class="modal-body">
+            <div id="pie123"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+        </div>
+    </script>
+    <div id="content_left_double" style="width: 590px; padding: 0 43px 0 0; margin-left: 22px;">
+        <div id="pie"></div>
+    </div>
+    <div style="color:black;">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Online Portal name</th>
+                    <th>Sales%</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in pieChartInitData">
+                    <td>{{item.label}}</td>
+                    <td>{{item.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

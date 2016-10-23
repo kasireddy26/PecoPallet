@@ -1,0 +1,91 @@
+﻿@model IEnumerable<SampleTracking.user>
+
+
+  @{
+      ViewBag.Title = "CreateUser";
+      Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style>
+        .table th{
+            color:white;
+            font-size:1.2em;
+        }
+         .table td{
+            color:white;
+            font-size: 0.9em;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <table class="table">
+        <tr>    
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <!-- 
+            <th>
+                @Html.DisplayNameFor(model => model.Inactive)
+            </th>
+
+                -->
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <!-- 
+            <td>
+                @Html.DisplayFor(modelItem => item.Inactive)
+            </td>
+
+                -->
+            <td>
+                @Html.ActionLink("Roles", "UserRoles", "AppUser", new { id=item.User_Id },null) 
+            </td>
+        </tr>
+    }
+    
+    </table>
+
+
+   
+</body>
+</html>

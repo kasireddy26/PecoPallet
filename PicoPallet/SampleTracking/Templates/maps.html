@@ -1,0 +1,57 @@
+﻿<div id="main" role="main">
+    <div id="content" class="container">
+        <div class="row">
+            <div id="Div0" ng-show="showNotDiv" style="width: 590px; padding: 0 0 0 0; margin-left: 22px; margin-top: 20px">
+                <h2 class="txt-color-red login-header-big" style="color:black" >Asset route</h2>
+                <br />
+                <div id='mapdiv1' ng-init="getMap()" style="position: relative; width: 1200px; height: 600px;"></div>
+            </div>
+            <div id="Div1" ng-show="showPushDiv" style="width: 590px; padding: 0 0 0 0; margin-left: 22px; margin-top: 20px">
+                <h2 class="txt-color-red login-header-big" style="color:black" >Pallet current location</h2>
+                <br />
+                <div id='mapdiv2' ng-init="getMap2()" style="position: relative; width: 1200px; height: 600px;"></div>
+            </div>
+
+            <div style="margin-top: 0px;margin-left: 22px;color:black">
+                <h3>Asset tracking data</h3>
+                Search:
+                <input type="text" ng-model="searchText" style="color:black" />
+                <!-- <br />
+                   Selection:
+    <span id="selectedRows">
+    </span>
+                <div id="myGrid" style="height: 100%;" class="ag-fresh"></div>
+                <br />-->
+                <table border="1" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Action Item</th>
+                            <th>Track Route</th>
+                            <th>Location Point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in mapsData | filter:searchText" ng-click="clickNotification(item)">
+                            <td>{{item.item}}</td>
+                            <td>{{item.route}}</td>
+                            <td>{{item.point}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--                        <tr ng-click="clickNotification()">
+                            <td>Notification</td>
+                            <td>Seattle > Tacoma > Olympia</td>
+                            <td>47.043050, -122.888117</td>
+                        </tr>
+                        <tr ng-click="clickPushpin()">
+                            <td>Pallet Location</td>
+                            <td>Atlanta</td>
+                            <td>33.792692, -84.394327</td>
+                        </tr>-->
+

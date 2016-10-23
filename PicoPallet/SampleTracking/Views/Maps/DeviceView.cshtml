@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+<script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+<link href="~/CSS/Style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script src="~/Scripts/angular.min.js"></script>
+
+
+<script>
+
+	  var app = angular.module("App", []);
+app.controller("Ctrl",["$scope","$http", function($scope,$http) {
+    $scope.map = {};
+	$scope.GetMap=  function()
+      {
+
+         $scope.map = new Microsoft.Maps.Map(document.getElementById("mapDiv"),
+                           {credentials: "AnDvM9VHP-ujFKtfLebovTRHr4_eHgoSj5kQgGPIiM6YTJDrbutUpzVCb2Buorpo",
+                           center: new Microsoft.Maps.Location(51, -114.380979),
+                            mapTypeId: Microsoft.Maps.MapTypeId.road,
+                            zoom: 5});
+						//	var pushpin= new Microsoft.Maps.Pushpin($scope.map.getCenter(), null);
+							//$scope.map.entities.push(pushpin);
+                            //pushpin.setLocation(new Microsoft.Maps.Location(47.5, -122.33));
+	}
+	$scope.LoadLocations = function () {
+	    $http.get("/api/Ping/Locations/187E86")
+        .then(function (response) {
+
+            $scope.content = response.data;
+
+            for (var i = 0; i < $scope.content.length; i++) {
+                var loc = $scope.content[i];
+                var pushpin = new Microsoft.Maps.Pushpin($scope.map.getCenter(), null);
+                $scope.map.entities.push(pushpin);
+                pushpin.setLocation(new Microsoft.Maps.Location(loc.Lat ,loc.Long));
+            }
+
+            console.log($scope.content);
+        }, function (response) {
+
+            //   $scope.content = "Something went wrong";
+
+        });
+	}
+
+	function init() {
+	 
+  $scope.GetMap();
+	      $scope.LoadLocations();
+	 }
+	init();
+
+}]);
+</script>
+
+
+
+
+
+
+
+<div ng-app="App" ng-controller="Ctrl">
+    <div >
+
+        <div id='mapDiv' >
+
+        </div>
+
+        
+
+    </div>
+</div>
+

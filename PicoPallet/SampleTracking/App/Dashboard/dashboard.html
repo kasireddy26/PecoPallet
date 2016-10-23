@@ -1,0 +1,344 @@
+﻿<div class="row">
+    <div id="paper-top">
+        <div class="col-sm-3">
+            <h2 class="tittle-content-header">
+                <i class="icon-window"></i>
+                <span>
+                    Dashboard
+                </span>
+            </h2>
+        </div>
+        <div class="col-sm-9">
+            <div class="devider-vertical visible-lg"></div>
+            <div class="tittle-middle-header">
+                <div class="alert">
+                    <span class="tittle-alert entypo-info-circled"></span>
+                    Write something about dashboard&nbsp;
+                    <strong></strong>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="breadcrumb" style="margin:10px;">
+    <li>
+        <span class="entypo-home"></span>
+    </li>
+
+    <li style="position:relative;right:2px;top:2px;z-index:2;float:right;">
+        <button ng-click="hidecontrols()" class="btn btn-primary" style="margin-right: 30px;">Map Controls</button>
+    </li>
+</ul>
+
+<div class="row">
+    <div id="toolbarContainer" style="position:relative;right:2px;top:2px;z-index:2;float:right;" ng-show="toolbar"></div>
+    </div>
+<div class="row">
+    <div id="myMap" style="position:relative; width:100%; height:500px;"></div>
+</div>
+<!-- Containers below Map  ng-disabled="lstPushPoint.length==0 && lstPolygonPoint.length == 0" -->
+<div class="content-wrap">
+    <div class="row">
+        <div class="col-sm-4">
+            <input type="text" class="form-control" style="color:black;" placeholder="Polygon Name" ng-model="polygonName" />
+            </div>
+        <div class="col-sm-4">
+            <button ng-click="savePushPindata()" class="btn btn-primary" style="margin-top: 0px;">Save</button>
+            </div>
+        <div class="col-sm-4"></div>
+        </div>
+    </div>
+    <div>
+        <!-- Truck Destination -->
+        <div class="col-sm-8">
+            <div id="siteClose" class="nest">
+                <div class="title-alt">
+                    <h6>
+                        <span class="fontawesome-truck"></span>&nbsp; Truck Destination
+                    </h6>
+                    <div class="titleClose">
+                        <a class="gone" href="#siteClose">
+                            <span class="entypo-cancel"></span>
+                        </a>
+                    </div>
+                    <div class="titleToggle">
+                        <a class="nav-toggle-alt" href="#site">
+                            <span class="entypo-up-open"></span>
+                        </a>
+                    </div>
+                </div>
+                <div id="site" class="body-nest" style="min-height:296px;">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="armada-devider">
+                                        <div class="armada">
+                                            <span style="background:#65C3DF">
+                                                <span class="maki-bus"></span>&nbsp;&nbsp;Truck 1
+                                            </span>
+                                            <p>
+                                                <span class="entypo-gauge"></span>&nbsp;ETA 16:00<i>Hours</i>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="driver-devider">
+                                        <img class="armada-pic img-circle" alt="" src="#">
+                                        <h3>Mark </h3>
+                                        <br>
+                                        <p>Driver</p>
+                                    </td>
+                                    <td class="progress-devider">
+
+                                        <section id="percentage">
+                                            <article>
+                                                <div class="number-pb">
+                                                    <div class="number-pb-shown dream"></div>
+                                                    <div class="number-pb-num">0%</div>
+                                                </div>
+                                            </article>
+                                        </section>
+                                        <span class="label pull-left">Irvington</span>
+                                        <span class="label pull-right">Jersey city</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="armada-devider">
+                                        <div class="armada">
+                                            <span style="background:#45B6B0">
+                                                <span class="maki-bus"></span>&nbsp;&nbsp;Truck 2
+                                            </span>
+                                            <p>
+                                                <span class="entypo-gauge"></span>&nbsp;ETA 15:00<i>Hours</i>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="driver-devider">
+                                        <img class="armada-pic img-circle" alt="" src="#">
+                                        <h3>Marko</h3>
+                                        <br>
+                                        <p>Driver</p>
+                                    </td>
+                                    <td class="progress-devider">
+
+                                        <section id="percentage">
+                                            <article>
+                                                <div class="number-pb">
+                                                    <div class="number-pb-shown dream"></div>
+                                                    <div class="number-pb-num">0%</div>
+                                                </div>
+                                            </article>
+                                        </section>
+
+                                        <span class="label pull-left">Irvington</span>
+                                        <span class="label pull-right">Chicago</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="armada-devider">
+                                        <div class="armada">
+                                            <span style="background:#FF6B6B">
+                                                <span class="maki-bus"></span>&nbsp;&nbsp;Truck 3
+                                            </span>
+                                            <p>
+                                                <span class="entypo-gauge"></span>&nbsp;ETA 15:30<i>Hours</i>
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td class="driver-devider">
+                                        <img class="armada-pic img-circle" alt="" src="#">
+                                        <h3>David</h3>
+                                        <br>
+                                        <p>Driver</p>
+                                    </td>
+                                    <td class="progress-devider">
+                                        <section id="percentage">
+                                            <article>
+                                                <div class="number-pb">
+                                                    <div class="number-pb-shown dream"></div>
+                                                    <div class="number-pb-num">0%</div>
+                                                </div>
+                                            </article>
+                                        </section>
+                                        <span class="label pull-left">Irvington</span>
+                                        <span class="label pull-right">Brooklyn</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Truck Destination -->
+        <!-- Pallet Info -->
+        <div class="col-sm-4">
+            <div id="RealTimeClose" class="nest">
+                <div class="title-alt">
+                    <h6>
+                        <span class="fontawesome-resize-horizontal"></span>&nbsp;Pallet Info
+                    </h6>
+                    <div class="titleClose">
+                        <a class="gone" href="#RealTimeClose">
+                            <span class="entypo-cancel"></span>
+                        </a>
+                    </div>
+                    <div class="titleToggle">
+                        <a class="nav-toggle-alt" href="#RealTime">
+                            <span class="entypo-up-open"></span>
+                        </a>
+                    </div>
+                </div>
+                <div id="RealTime" style="min-height:296px;padding-top:20px;" class="body-nest">
+                    <ul class="direction">
+                        <li>
+
+                            <h2>
+                                <span>Pallet Info 1</span>
+                            </h2>
+                            <p>
+                                Sample Info&nbsp;&nbsp;<i class=""></i>
+                            </p>
+
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+
+                            <h2>
+                                <span>Pallet Info 2</span>
+                            </h2>
+                            <p>
+                                Sample Info&nbsp;&nbsp;<i class=""></i>
+                            </p>
+
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+
+                            <h2>
+                                <span>Pallet Info 3</span>
+                            </h2>
+                            <p>
+                                Sample Info &nbsp;&nbsp;<i class=""></i>
+                            </p>
+
+                        </li>
+                        <li class="divider"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Pallet Info -->
+    </div>
+</div>
+<!--End of  Containers below Map -->
+<script>
+    var map = null;
+    var greenLayer;
+
+    function displayInfo(e) {
+        if (e.targetType == "pushpin") {
+            showInfobox(e.target);
+        }
+    }
+
+    function showInfobox(shape) {
+        for (var i = map.entities.getLength() - 1; i >= 0; i--) {
+            var pushpin = map.entities.get(i);
+            if (pushpin.toString() == '[Infobox]') {
+                map.entities.removeAt(i);
+            };
+        }
+        var pix = map.tryLocationToPixel(shape.getLocation(), Microsoft.Maps.PixelReference.control);
+        var infoboxOptions = { width: 170, height: 80, showCloseButton: true, zIndex: 10, offset: new Microsoft.Maps.Point(10, 0), showPointer: true, title: shape.title, description: shape.description };
+        var defInfobox = new Microsoft.Maps.Infobox(shape.getLocation(), infoboxOptions);
+        map.entities.push(defInfobox);
+    }
+
+    function customModuleLoaded(pins) {
+        greenLayer = new ClusteredEntityCollection(map, {
+            singlePinCallback: createPin,
+            clusteredPinCallback: createClusteredPin
+        });
+        console.log(pins);
+        requestGreenDataCallback(pins);
+        //  setTimeout(function (obj) { testDataGenerator.generateData(200, requestGreenDataCallback); }, 2000, testDataGenerator);
+    }
+
+    function requestGreenDataCallback(response) {
+        if (response != null) {
+            // console.log('Response');
+            //    console.log(response);
+            //This method is part of dynamically downloaded clustering Module V7ClientSideClustering.js.
+            greenLayer.SetData(response);
+        }
+    }
+    function createClusteredPin(cluster, latlong) {
+        var pin = new Microsoft.Maps.Pushpin(latlong, {
+            icon: '/content/images/clusteredpin.png',
+            anchor: new Microsoft.Maps.Point(8, 8)
+        });
+        pin.title = 'Cluster pin';
+        pin.description = 'Cluster Size: ' + cluster.length;
+        Microsoft.Maps.Events.addHandler(pin, 'click', displayInfo);
+        return pin;
+    }
+
+    function createPin(data) {
+        var pin = new Microsoft.Maps.Pushpin(data._LatLong, {
+            icon: '/content/images/nonclusteredpin.png',
+            anchor: new Microsoft.Maps.Point(8, 8)
+        });
+        pin.title = 'Single pin';
+        pin.description = 'GridKey: ' + data.GridKey;
+        Microsoft.Maps.Events.addHandler(pin, 'click', displayInfo);
+        return pin;
+    }
+
+    function getMap(mapId) {
+        map = new Microsoft.Maps.Map(document.getElementById(mapId), {
+            credentials: 'AnDvM9VHP-ujFKtfLebovTRHr4_eHgoSj5kQgGPIiM6YTJDrbutUpzVCb2Buorpo',
+            center: new Microsoft.Maps.Location(39.609771, -98.2321543125),
+            zoom: 4
+        });
+        registerClusterModule();
+    }
+
+    function registerClusterModule() {
+        Microsoft.Maps.registerModule('clusterModule', 'https://www.bingmapsportal.com/scripts/V7ClientSideClustering.js');
+        Microsoft.Maps.registerModule("DrawingToolsModule", "/content/DrawingToolsModule.js");
+
+    }
+
+    function loadClusterModule(loadLocCallback, loadMapCallBack) {
+        Microsoft.Maps.loadModule('clusterModule', { callback: loadLocCallback });
+        Microsoft.Maps.loadModule("DrawingToolsModule", {
+            callback: function () {
+                var drawingTools = new DrawingTools.DrawingManager(map, {
+                    toolbarContainer: document.getElementById('toolbarContainer'),
+
+                    events: {
+                        drawingEnded: function (s) {
+                            loadMapCallBack(s);
+                        }
+                    }
+                });
+            }
+        });
+    }
+    ////    getMap('myMap');
+    //var app = angular.module('myApp', []);
+    //app.controller('myCtrl', function ($scope, $http) {
+
+    //});
+
+</script>

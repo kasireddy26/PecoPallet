@@ -1,0 +1,1044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IOT_AT_DEVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_AT_DVC">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DVC_NM" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="DVC_CD" Type="varchar" MaxLength="50" />
+    <Property Name="DVC_TYP_ID" Type="int" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_CAPBLTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DVC_CAP" Type="varchar" MaxLength="50" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DVC_TYP_DESC" Type="varchar" MaxLength="50" />
+    <Property Name="DVC_TYP_MNFCTR" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DVC_TYP_COST" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_TYP_CAPBLTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DVC_TYP_ID" Type="int" Nullable="false" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DVC_CAPBLTY_ID" Type="int" Nullable="false" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GPS_PING_TM" Type="varchar" MaxLength="10" />
+    <Property Name="RSSI" Type="varchar" MaxLength="50" />
+    <Property Name="SNR" Type="varchar" MaxLength="50" />
+    <Property Name="DATA" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="DVC_ID" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IOT_AT_DEV.dbo.TBL_AT_MESSAGE_DATA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBL_AT_MESSAGE_DATA">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MESSAGE_ID" Type="int" />
+    <Property Name="VALUE" Type="varchar" MaxLength="50" />
+    <Property Name="VALUE_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="STARTHEX" Type="int" />
+    <Property Name="STARTBIT" Type="int" />
+    <Property Name="ENDHEX" Type="int" />
+    <Property Name="ENDBIT" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_AT_MESSAGE_TYPE">
+    <Key>
+      <PropertyRef Name="MESSAGE_ID" />
+    </Key>
+    <Property Name="MESSAGE_ID" Type="int" Nullable="false" />
+    <Property Name="MESSAGE_TYPE" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DRCTN">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DRCTN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LONG_DIFF" Type="int" />
+    <Property Name="LAT_DIFF" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_NM" Type="varchar" MaxLength="50" />
+    <Property Name="RFRNC_NBR" Type="varchar" MaxLength="50" />
+    <Property Name="EVNT_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_END_TM" Type="datetime" />
+    <Property Name="EVNT_TYP_ID" Type="int" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_DVC">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_DVC_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_DVC_END_TM" Type="datetime" />
+    <Property Name="ACTIVE" Type="bit" />
+    <Property Name="DVC_ID" Type="int" Nullable="false" />
+    <Property Name="EVNT_ID" Type="int" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_STATE_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_STATE_END_TM" Type="datetime" />
+    <Property Name="EVNT_STATE_TYP_ID" Type="int" />
+    <Property Name="EVNT_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_STATE_TYP" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_TYP" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_DESC" Type="varchar" MaxLength="50" />
+    <Property Name="GEOFENCE_SHAPE" Type="varchar" MaxLength="50" />
+    <Property Name="GEOFENCE_TYP" Type="int" />
+    <Property Name="GEOFENCE_ZNG" Type="int" />
+    <Property Name="LOCATION_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_COOR">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_COOR_LONG" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_LAT" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_RADIUS" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_ORDER" Type="int" />
+    <Property Name="GEOFENCE_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROP_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_PROP_TYP_NM" Type="varchar" MaxLength="20" />
+    <Property Name="GEOFENCE_PROP_TYP_INPUT" Type="varchar" MaxLength="20" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROPERTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="GEOFENCE_PROP_TYP_VAL" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_ID" Type="int" />
+    <Property Name="GEOFENCE_PROP_TYP_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING_DATA">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="GPS_PING_ID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GPS_PING_DT" Type="datetime" />
+    <Property Name="GPS_TYP" Type="varchar" MaxLength="6" />
+    <Property Name="GPS_STAT" Type="varchar" MaxLength="2" />
+    <Property Name="GPS_LAT" Type="float" />
+    <Property Name="GPS_LONG" Type="float" />
+    <Property Name="GPS_TEMP" Type="numeric" Precision="14" Scale="1" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="GPS_SGNL_TM" Type="int" />
+    <Property Name="GPS_RSSI" Type="varchar" MaxLength="50" />
+    <Property Name="GPS_SNR" Type="varchar" MaxLength="50" />
+    <Property Name="CMNT" Type="varchar" MaxLength="500" />
+    <Property Name="ORNTN" Type="nvarchar" MaxLength="255" />
+    <Property Name="BLCK_TYP" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="GPS_PING_ID" Type="int" Nullable="false" />
+    <Property Name="DVC_ID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IOT_AT_DEV.peco.TBL_AT_LNK_ROLE_PERMISSION' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TBL_AT_LNK_ROLE_PERMISSION">
+          <Property Name="Role_Id" Type="int" />
+          <Property Name="Permission_Id" Type="int" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'IOT_AT_DEV.peco.TBL_AT_LNK_USER_ROLE' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TBL_AT_LNK_USER_ROLE">
+          <Property Name="user_Id" Type="int" />
+          <Property Name="role_Id" Type="int" />
+        </EntityType>-->
+  <EntityType Name="TBL_AT_LOCTN">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="LOCTN_CD" Type="varchar" MaxLength="10" />
+    <Property Name="LOCTN_TYP" Type="int" />
+    <Property Name="COMPANY" Type="varchar" MaxLength="10" />
+    <Property Name="LOCTN_NM" Type="varchar" MaxLength="250" />
+    <Property Name="LOCTN_NM_2" Type="varchar" MaxLength="250" />
+    <Property Name="LOCTN_ADDR" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_ADDR_2" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_CTY" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_PSTL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_CNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_ZN" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="150" />
+    <Property Name="CNTCT" Type="varchar" MaxLength="50" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_PERMISSIONS">
+    <Key>
+      <PropertyRef Name="Permission_Id" />
+    </Key>
+    <Property Name="Permission_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermissionDescription" Type="nvarchar" MaxLength="150" />
+    <Property Name="PermissionCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PermissionName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_ROLES">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleDescription" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsSysAdmin" Type="bit" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SuperRoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_STAT">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BATTERY_STAT" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_USERS">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SystemUserId" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Inactive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DRCTN1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DRCTN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LONG_DIFF" Type="int" />
+    <Property Name="LAT_DIFF" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_NM" Type="varchar" MaxLength="50" />
+    <Property Name="RFRNC_NBR" Type="varchar" MaxLength="50" />
+    <Property Name="EVNT_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_END_TM" Type="datetime" />
+    <Property Name="EVNT_TYP_ID" Type="int" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_DVC1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_DVC_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_DVC_END_TM" Type="datetime" />
+    <Property Name="ACTIVE" Type="bit" />
+    <Property Name="DVC_ID" Type="int" Nullable="false" />
+    <Property Name="EVNT_ID" Type="int" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_STATE_STRT_TM" Type="datetime" />
+    <Property Name="EVNT_STATE_END_TM" Type="datetime" />
+    <Property Name="EVNT_STATE_TYP_ID" Type="int" />
+    <Property Name="EVNT_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_STATE_TYP" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EVNT_TYP" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_DESC" Type="varchar" MaxLength="50" />
+    <Property Name="GEOFENCE_SHAPE" Type="varchar" MaxLength="50" />
+    <Property Name="GEOFENCE_TYP" Type="int" />
+    <Property Name="GEOFENCE_ZNG" Type="int" />
+    <Property Name="LOCATION_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_COOR1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_COOR_LONG" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_LAT" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_RADIUS" Type="decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_ORDER" Type="int" />
+    <Property Name="GEOFENCE_ID" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROP_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_PROP_TYP_NM" Type="varchar" MaxLength="20" />
+    <Property Name="GEOFENCE_PROP_TYP_INPUT" Type="varchar" MaxLength="20" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROPERTY1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="GEOFENCE_PROP_TYP_VAL" Type="int" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GEOFENCE_ID" Type="int" />
+    <Property Name="GEOFENCE_PROP_TYP_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING_DATA1">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="GPS_PING_ID" />
+    </Key>
+    <Property Name="IID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DVC_ID" Type="varchar" MaxLength="10" />
+    <Property Name="GPS_PING_DT" Type="datetime" />
+    <Property Name="GPS_TYP" Type="varchar" MaxLength="6" />
+    <Property Name="GPS_STAT" Type="varchar" MaxLength="2" />
+    <Property Name="GPS_LAT" Type="float" />
+    <Property Name="GPS_LONG" Type="float" />
+    <Property Name="GPS_TEMP" Type="numeric" Precision="14" Scale="1" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="GPS_SGNL_TM" Type="int" />
+    <Property Name="GPS_RSSI" Type="varchar" MaxLength="50" />
+    <Property Name="GPS_SNR" Type="varchar" MaxLength="50" />
+    <Property Name="CMNT" Type="varchar" MaxLength="500" />
+    <Property Name="ORNTN" Type="nvarchar" MaxLength="255" />
+    <Property Name="BLCK_TYP" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPS_PING_ID" Type="int" Nullable="false" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_LOCTN1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="LOCTN_CD" Type="varchar" MaxLength="10" />
+    <Property Name="LOCTN_TYP" Type="int" />
+    <Property Name="COMPANY" Type="varchar" MaxLength="10" />
+    <Property Name="LOCTN_NM" Type="varchar" MaxLength="250" />
+    <Property Name="LOCTN_NM_2" Type="varchar" MaxLength="250" />
+    <Property Name="LOCTN_ADDR" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_ADDR_2" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_CTY" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_STATE" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_PSTL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_CNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="LOCTN_ZN" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="150" />
+    <Property Name="CNTCT" Type="varchar" MaxLength="50" />
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AT_STAT1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BATTERY_STAT" Type="varchar" MaxLength="50" />
+    <Property Name="ADDED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="LAST_MODIFY_BY" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_MODIFY_DATE" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IOT_AT_DEV.dbo.v_GPS_Ping' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="v_GPS_Ping">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+      <PropertyRef Name="AddedBy" />
+      <PropertyRef Name="ModifyBy" />
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="DeviceName" />
+    </Key>
+    <Property Name="Date" Type="datetime" />
+    <Property Name="DocumentID" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="battery" Type="varchar" MaxLength="255" />
+    <Property Name="Latitude" Type="varchar" MaxLength="255" />
+    <Property Name="Longitude" Type="varchar" MaxLength="255" />
+    <Property Name="Temperature" Type="varchar" MaxLength="255" />
+    <Property Name="CREATION_DATE" Type="datetime" />
+    <Property Name="SignalTime" Type="varchar" MaxLength="255" />
+    <Property Name="RSSI" Type="varchar" MaxLength="50" />
+    <Property Name="SNR" Type="varchar" MaxLength="50" />
+    <Property Name="AddedBy" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="ModifyBy" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MODIFY_DATE" Type="datetime" />
+    <Property Name="IID" Type="int" Nullable="false" />
+    <Property Name="DeviceID" Type="int" />
+    <Property Name="DeviceName" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IOT_AT_DEV.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="create_date" Type="datetime" Nullable="false" />
+    <Property Name="modify_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+error 6004: The table 'IOT_AT_DEV.peco.TBL_AT_LNK_ROLE_PERMISSION' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_permission_role" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'IOT_AT_DEV.peco.TBL_AT_LNK_USER_ROLE' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_role_user" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'IOT_AT_DEV.peco.TBL_AT_LNK_ROLE_PERMISSION' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_roles_permission" />-->
+  <Association Name="FK_roles_super">
+    <End Role="TBL_AT_ROLES" Type="Self.TBL_AT_ROLES" Multiplicity="1" />
+    <End Role="TBL_AT_ROLES1" Type="Self.TBL_AT_ROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_ROLES">
+        <PropertyRef Name="Role_Id" />
+      </Principal>
+      <Dependent Role="TBL_AT_ROLES1">
+        <PropertyRef Name="SuperRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'IOT_AT_DEV.peco.TBL_AT_LNK_USER_ROLE' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_user_role" />-->
+  <Association Name="R_1">
+    <End Role="TBL_AT_DVC_TYP" Type="Self.TBL_AT_DVC_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC">
+        <PropertyRef Name="DVC_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_10">
+    <End Role="TBL_AT_EVNT_STATE_TYP" Type="Self.TBL_AT_EVNT_STATE_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE" Type="Self.TBL_AT_EVNT_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_STATE_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE">
+        <PropertyRef Name="EVNT_STATE_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_101">
+    <End Role="TBL_AT_EVNT_STATE_TYP1" Type="Self.TBL_AT_EVNT_STATE_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE1" Type="Self.TBL_AT_EVNT_STATE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_STATE_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE1">
+        <PropertyRef Name="EVNT_STATE_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_12">
+    <End Role="TBL_AT_LOCTN" Type="Self.TBL_AT_LOCTN" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_LOCTN">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_121">
+    <End Role="TBL_AT_LOCTN1" Type="Self.TBL_AT_LOCTN1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_LOCTN1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_13">
+    <End Role="TBL_AT_GPS_PING" Type="Self.TBL_AT_GPS_PING" Multiplicity="1" />
+    <End Role="TBL_AT_GPS_PING_DATA1" Type="Self.TBL_AT_GPS_PING_DATA1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GPS_PING">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GPS_PING_DATA1">
+        <PropertyRef Name="GPS_PING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE" Type="Self.TBL_AT_EVNT_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_161">
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE1" Type="Self.TBL_AT_EVNT_STATE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE1">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_19">
+    <End Role="TBL_AT_DVC_TYP" Type="Self.TBL_AT_DVC_TYP" Multiplicity="1" />
+    <End Role="TBL_AT_DVC_TYP_CAPBLTY" Type="Self.TBL_AT_DVC_TYP_CAPBLTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC_TYP_CAPBLTY">
+        <PropertyRef Name="DVC_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_20">
+    <End Role="TBL_AT_DVC_CAPBLTY" Type="Self.TBL_AT_DVC_CAPBLTY" Multiplicity="1" />
+    <End Role="TBL_AT_DVC_TYP_CAPBLTY" Type="Self.TBL_AT_DVC_TYP_CAPBLTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_CAPBLTY">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC_TYP_CAPBLTY">
+        <PropertyRef Name="DVC_CAPBLTY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_21">
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY" Type="Self.TBL_AT_GEOFENCE_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_211">
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY1" Type="Self.TBL_AT_GEOFENCE_PROPERTY1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY1">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_23">
+    <End Role="TBL_AT_GEOFENCE_PROP_TYP" Type="Self.TBL_AT_GEOFENCE_PROP_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY" Type="Self.TBL_AT_GEOFENCE_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE_PROP_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY">
+        <PropertyRef Name="GEOFENCE_PROP_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_231">
+    <End Role="TBL_AT_GEOFENCE_PROP_TYP1" Type="Self.TBL_AT_GEOFENCE_PROP_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY1" Type="Self.TBL_AT_GEOFENCE_PROPERTY1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE_PROP_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY1">
+        <PropertyRef Name="GEOFENCE_PROP_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_28">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="0..1" />
+    <End Role="TBL_AT_GPS_PING_DATA" Type="Self.TBL_AT_GPS_PING_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GPS_PING_DATA">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_3">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="1" />
+    <End Role="TBL_AT_EVNT_DVC" Type="Self.TBL_AT_EVNT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_31">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="1" />
+    <End Role="TBL_AT_EVNT_DVC1" Type="Self.TBL_AT_EVNT_DVC1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC1">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_DVC" Type="Self.TBL_AT_EVNT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_41">
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_DVC1" Type="Self.TBL_AT_EVNT_DVC1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC1">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_6">
+    <End Role="TBL_AT_EVNT_TYP" Type="Self.TBL_AT_EVNT_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT">
+        <PropertyRef Name="EVNT_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_61">
+    <End Role="TBL_AT_EVNT_TYP1" Type="Self.TBL_AT_EVNT_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT1">
+        <PropertyRef Name="EVNT_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_9">
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_COOR" Type="Self.TBL_AT_GEOFENCE_COOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_COOR">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_91">
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_COOR1" Type="Self.TBL_AT_GEOFENCE_COOR1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_COOR1">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IOT_AT_DEVModelStoreContainer">
+    <EntitySet Name="TBL_AT_DVC" EntityType="Self.TBL_AT_DVC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_DVC_CAPBLTY" EntityType="Self.TBL_AT_DVC_CAPBLTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_DVC_TYP" EntityType="Self.TBL_AT_DVC_TYP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_DVC_TYP_CAPBLTY" EntityType="Self.TBL_AT_DVC_TYP_CAPBLTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GPS_PING" EntityType="Self.TBL_AT_GPS_PING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_MESSAGE_TYPE" EntityType="Self.TBL_AT_MESSAGE_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_DRCTN" EntityType="Self.TBL_AT_DRCTN" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT" EntityType="Self.TBL_AT_EVNT" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_DVC" EntityType="Self.TBL_AT_EVNT_DVC" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_STATE" EntityType="Self.TBL_AT_EVNT_STATE" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_STATE_TYP" EntityType="Self.TBL_AT_EVNT_STATE_TYP" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_TYP" EntityType="Self.TBL_AT_EVNT_TYP" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE" EntityType="Self.TBL_AT_GEOFENCE" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_COOR" EntityType="Self.TBL_AT_GEOFENCE_COOR" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROP_TYP" EntityType="Self.TBL_AT_GEOFENCE_PROP_TYP" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROPERTY" EntityType="Self.TBL_AT_GEOFENCE_PROPERTY" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GPS_PING_DATA" EntityType="Self.TBL_AT_GPS_PING_DATA" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_LOCTN" EntityType="Self.TBL_AT_LOCTN" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_PERMISSIONS" EntityType="Self.TBL_AT_PERMISSIONS" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_ROLES" EntityType="Self.TBL_AT_ROLES" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_STAT" EntityType="Self.TBL_AT_STAT" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_USERS" EntityType="Self.TBL_AT_USERS" Schema="peco" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_DRCTN1" EntityType="Self.TBL_AT_DRCTN1" Schema="walmart" Table="TBL_AT_DRCTN" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT1" EntityType="Self.TBL_AT_EVNT1" Schema="walmart" Table="TBL_AT_EVNT" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_DVC1" EntityType="Self.TBL_AT_EVNT_DVC1" Schema="walmart" Table="TBL_AT_EVNT_DVC" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_STATE1" EntityType="Self.TBL_AT_EVNT_STATE1" Schema="walmart" Table="TBL_AT_EVNT_STATE" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_STATE_TYP1" EntityType="Self.TBL_AT_EVNT_STATE_TYP1" Schema="walmart" Table="TBL_AT_EVNT_STATE_TYP" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_EVNT_TYP1" EntityType="Self.TBL_AT_EVNT_TYP1" Schema="walmart" Table="TBL_AT_EVNT_TYP" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE1" EntityType="Self.TBL_AT_GEOFENCE1" Schema="walmart" Table="TBL_AT_GEOFENCE" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_COOR1" EntityType="Self.TBL_AT_GEOFENCE_COOR1" Schema="walmart" Table="TBL_AT_GEOFENCE_COOR" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROP_TYP1" EntityType="Self.TBL_AT_GEOFENCE_PROP_TYP1" Schema="walmart" Table="TBL_AT_GEOFENCE_PROP_TYP" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROPERTY1" EntityType="Self.TBL_AT_GEOFENCE_PROPERTY1" Schema="walmart" Table="TBL_AT_GEOFENCE_PROPERTY" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_GPS_PING_DATA1" EntityType="Self.TBL_AT_GPS_PING_DATA1" Schema="walmart" Table="TBL_AT_GPS_PING_DATA" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_LOCTN1" EntityType="Self.TBL_AT_LOCTN1" Schema="walmart" Table="TBL_AT_LOCTN" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_STAT1" EntityType="Self.TBL_AT_STAT1" Schema="walmart" Table="TBL_AT_STAT" store:Type="Tables" />
+    <EntitySet Name="TBL_AT_MESSAGE_DATA" EntityType="Self.TBL_AT_MESSAGE_DATA" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBL_AT_MESSAGE_DATA].[IID] AS [IID], 
+    [TBL_AT_MESSAGE_DATA].[MESSAGE_ID] AS [MESSAGE_ID], 
+    [TBL_AT_MESSAGE_DATA].[VALUE] AS [VALUE], 
+    [TBL_AT_MESSAGE_DATA].[VALUE_TYPE] AS [VALUE_TYPE], 
+    [TBL_AT_MESSAGE_DATA].[STARTHEX] AS [STARTHEX], 
+    [TBL_AT_MESSAGE_DATA].[STARTBIT] AS [STARTBIT], 
+    [TBL_AT_MESSAGE_DATA].[ENDHEX] AS [ENDHEX], 
+    [TBL_AT_MESSAGE_DATA].[ENDBIT] AS [ENDBIT]
+    FROM [dbo].[TBL_AT_MESSAGE_DATA] AS [TBL_AT_MESSAGE_DATA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_GPS_Ping" EntityType="Self.v_GPS_Ping" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_GPS_Ping].[Date] AS [Date], 
+    [v_GPS_Ping].[DocumentID] AS [DocumentID], 
+    [v_GPS_Ping].[battery] AS [battery], 
+    [v_GPS_Ping].[Latitude] AS [Latitude], 
+    [v_GPS_Ping].[Longitude] AS [Longitude], 
+    [v_GPS_Ping].[Temperature] AS [Temperature], 
+    [v_GPS_Ping].[CREATION_DATE] AS [CREATION_DATE], 
+    [v_GPS_Ping].[SignalTime] AS [SignalTime], 
+    [v_GPS_Ping].[RSSI] AS [RSSI], 
+    [v_GPS_Ping].[SNR] AS [SNR], 
+    [v_GPS_Ping].[AddedBy] AS [AddedBy], 
+    [v_GPS_Ping].[ModifyBy] AS [ModifyBy], 
+    [v_GPS_Ping].[MODIFY_DATE] AS [MODIFY_DATE], 
+    [v_GPS_Ping].[IID] AS [IID], 
+    [v_GPS_Ping].[DeviceID] AS [DeviceID], 
+    [v_GPS_Ping].[DeviceName] AS [DeviceName]
+    FROM [dbo].[v_GPS_Ping] AS [v_GPS_Ping]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+      <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_roles_super" Association="Self.FK_roles_super">
+      <End Role="TBL_AT_ROLES" EntitySet="TBL_AT_ROLES" />
+      <End Role="TBL_AT_ROLES1" EntitySet="TBL_AT_ROLES" />
+    </AssociationSet>
+    <AssociationSet Name="R_1" Association="Self.R_1">
+      <End Role="TBL_AT_DVC_TYP" EntitySet="TBL_AT_DVC_TYP" />
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_10" Association="Self.R_10">
+      <End Role="TBL_AT_EVNT_STATE_TYP" EntitySet="TBL_AT_EVNT_STATE_TYP" />
+      <End Role="TBL_AT_EVNT_STATE" EntitySet="TBL_AT_EVNT_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="R_101" Association="Self.R_101">
+      <End Role="TBL_AT_EVNT_STATE_TYP1" EntitySet="TBL_AT_EVNT_STATE_TYP1" />
+      <End Role="TBL_AT_EVNT_STATE1" EntitySet="TBL_AT_EVNT_STATE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_12" Association="Self.R_12">
+      <End Role="TBL_AT_LOCTN" EntitySet="TBL_AT_LOCTN" />
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+    </AssociationSet>
+    <AssociationSet Name="R_121" Association="Self.R_121">
+      <End Role="TBL_AT_LOCTN1" EntitySet="TBL_AT_LOCTN1" />
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_13" Association="Self.R_13">
+      <End Role="TBL_AT_GPS_PING" EntitySet="TBL_AT_GPS_PING" />
+      <End Role="TBL_AT_GPS_PING_DATA1" EntitySet="TBL_AT_GPS_PING_DATA1" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="Self.R_16">
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+      <End Role="TBL_AT_EVNT_STATE" EntitySet="TBL_AT_EVNT_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="R_161" Association="Self.R_161">
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+      <End Role="TBL_AT_EVNT_STATE1" EntitySet="TBL_AT_EVNT_STATE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_19" Association="Self.R_19">
+      <End Role="TBL_AT_DVC_TYP" EntitySet="TBL_AT_DVC_TYP" />
+      <End Role="TBL_AT_DVC_TYP_CAPBLTY" EntitySet="TBL_AT_DVC_TYP_CAPBLTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_20" Association="Self.R_20">
+      <End Role="TBL_AT_DVC_CAPBLTY" EntitySet="TBL_AT_DVC_CAPBLTY" />
+      <End Role="TBL_AT_DVC_TYP_CAPBLTY" EntitySet="TBL_AT_DVC_TYP_CAPBLTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_21" Association="Self.R_21">
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY" EntitySet="TBL_AT_GEOFENCE_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_211" Association="Self.R_211">
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY1" EntitySet="TBL_AT_GEOFENCE_PROPERTY1" />
+    </AssociationSet>
+    <AssociationSet Name="R_23" Association="Self.R_23">
+      <End Role="TBL_AT_GEOFENCE_PROP_TYP" EntitySet="TBL_AT_GEOFENCE_PROP_TYP" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY" EntitySet="TBL_AT_GEOFENCE_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_231" Association="Self.R_231">
+      <End Role="TBL_AT_GEOFENCE_PROP_TYP1" EntitySet="TBL_AT_GEOFENCE_PROP_TYP1" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY1" EntitySet="TBL_AT_GEOFENCE_PROPERTY1" />
+    </AssociationSet>
+    <AssociationSet Name="R_28" Association="Self.R_28">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_GPS_PING_DATA" EntitySet="TBL_AT_GPS_PING_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="R_3" Association="Self.R_3">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_EVNT_DVC" EntitySet="TBL_AT_EVNT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_31" Association="Self.R_31">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_EVNT_DVC1" EntitySet="TBL_AT_EVNT_DVC1" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="Self.R_4">
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+      <End Role="TBL_AT_EVNT_DVC" EntitySet="TBL_AT_EVNT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_41" Association="Self.R_41">
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+      <End Role="TBL_AT_EVNT_DVC1" EntitySet="TBL_AT_EVNT_DVC1" />
+    </AssociationSet>
+    <AssociationSet Name="R_6" Association="Self.R_6">
+      <End Role="TBL_AT_EVNT_TYP" EntitySet="TBL_AT_EVNT_TYP" />
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+    </AssociationSet>
+    <AssociationSet Name="R_61" Association="Self.R_61">
+      <End Role="TBL_AT_EVNT_TYP1" EntitySet="TBL_AT_EVNT_TYP1" />
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+    </AssociationSet>
+    <AssociationSet Name="R_9" Association="Self.R_9">
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+      <End Role="TBL_AT_GEOFENCE_COOR" EntitySet="TBL_AT_GEOFENCE_COOR" />
+    </AssociationSet>
+    <AssociationSet Name="R_91" Association="Self.R_91">
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+      <End Role="TBL_AT_GEOFENCE_COOR1" EntitySet="TBL_AT_GEOFENCE_COOR1" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,180 @@
+﻿@model SampleTracking.role
+
+@{
+    ViewBag.Title = "Roles";
+  
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Role</title>
+    <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script type="text/javascript">
+
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http,$window) {
+        $scope.RoleName = "";
+        $scope.RoleDesc = "";
+        $scope.status = "";
+        $scope.permissions = [];
+        $scope.RoleId = angular.element('#Role_Id').val();
+        $scope.loadperm = [];
+        $scope.LoadPermissions = function () {
+            $scope.loadperm = [];
+            $scope.permissions = [];
+            $http({
+                method: 'GET',
+                url: '/api/Permissions'
+            }).then(function successCallback(response) {
+                console.log(response.data);
+                $scope.permissions = response.data;
+                            $http({
+                                     method: 'GET',
+                                     url: '/api/Roles/' + $scope.RoleId
+                            }).then(function successCallback1(response1) {
+                                     // this callback will be called asynchronously
+                                     // when the response is available
+                                console.log(response1);
+                                var locpermissions = response1.data.permissions;
+                                for (var i = 0; i < locpermissions.length; i++) {
+                                    $scope.loadperm.push(locpermissions[i].Id);
+                                }
+                                console.log($scope.loadperm);
+                                for (var i = 0; i < $scope.permissions.length; i++) {
+                                    console.log($scope.loadperm.indexOf($scope.permissions[i].Id));
+                                    if ($scope.loadperm.indexOf($scope.permissions[i].Id) !== -1)
+                                      $scope.permissions[i].selected = true;
+                                  else
+                                      $scope.permissions[i].selected = false;
+
+                                }
+                                 }, function errorCallback1(response1) {
+                                     // called asynchronously if an error occurs
+                                     // or server returns response with an error status.
+                                     console.log(response1);
+                                $scope.status = "Error";
+                                 });
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(response);
+                $scope.status = "Error";
+            });
+        };
+        $scope.LoadPermissions();
+        $scope.diff = function(a1, a2) {
+
+            var a = [], diff = [];
+            var i=0;
+            var j=0;
+            for ( i = 0; i < a1.length; i++) {
+                
+                for (j = 0; j < a2.length; j++) {
+                    if (a1[i] == a2[j]) {
+                        break;
+                    }
+                }
+                if (j == a2.length) {
+                    diff.push(a1[i]);
+                }
+            }
+         
+
+            return diff;
+        };
+        $scope.SavePerm = function () {
+            var selectedPerm = [];
+            for (var i = 0; i < $scope.permissions.length; i++) {
+                console.log(i + " : " + $scope.permissions[i].selected);
+                if ($scope.permissions[i].selected) {
+                    selectedPerm.push($scope.permissions[i].Id);
+                }
+            }
+          
+          //  console.log('first');
+            var roleperm = { "Id": parseInt($scope.RoleId), "AddPermission": $scope.diff(selectedPerm, $scope.loadperm), "RemPermission": $scope.diff($scope.loadperm, selectedPerm) };
+         //   console.log($scope.diff($scope.loadperm, selectedPerm));//Removed
+           
+            console.log(roleperm);
+            //console.log($scope.diff(selectedPerm, $scope.loadperm));//Added
+            $http({
+                method: 'POST',
+                url: '/api/Roles/EditPermission',
+                data: JSON.stringify(roleperm)
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                console.log(response);
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(response);
+                $scope.status = "Error";
+            });
+            $scope.LoadPermissions();
+        };
+         });
+    </script>
+
+
+    <style>
+
+      
+      
+    </style>
+
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    @if (Model != null)
+    {
+        @Html.HiddenFor(model=>model.Role_Id)
+    <div>
+        <h4>role</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.RoleDescription)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RoleDescription)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.IsSysAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.IsSysAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RoleName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RoleName)
+            </dd>
+    
+          
+    
+        </dl>
+    </div>
+    <div ng-repeat="permission in permissions">
+
+        <div iid="repeat"><input type="checkbox" ng-model="permission.selected"/>{{permission.Id}} : {{permission.PermissionName}} : {{permission.PermissionDescription}}</div>
+       
+    </div>
+    <button ng-click="SavePerm()">Save Permissions</button><br />
+
+    <p>
+        @Html.ActionLink("Back to List", "Roles","AppUser")
+    </p>
+    }
+</body>
+</html>

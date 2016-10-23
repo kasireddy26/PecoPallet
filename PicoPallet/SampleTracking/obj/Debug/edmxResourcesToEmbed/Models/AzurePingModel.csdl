@@ -1,0 +1,1023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IOT_AT_DEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_AT_DVC">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DVC_NM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DVC_CD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DVC_TYP_ID" Type="Int32" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBL_AT_DVC_TYP" Relationship="Self.R_1" FromRole="TBL_AT_DVC" ToRole="TBL_AT_DVC_TYP" />
+    <NavigationProperty Name="TBL_AT_GPS_PING_DATA" Relationship="Self.R_28" FromRole="TBL_AT_DVC" ToRole="TBL_AT_GPS_PING_DATA" />
+    <NavigationProperty Name="TBL_AT_EVNT_DVC" Relationship="Self.R_3" FromRole="TBL_AT_DVC" ToRole="TBL_AT_EVNT_DVC" />
+    <NavigationProperty Name="TBL_AT_EVNT_DVC1" Relationship="Self.R_31" FromRole="TBL_AT_DVC" ToRole="TBL_AT_EVNT_DVC1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_CAPBLTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DVC_CAP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_DVC_TYP_CAPBLTY" Relationship="Self.R_20" FromRole="TBL_AT_DVC_CAPBLTY" ToRole="TBL_AT_DVC_TYP_CAPBLTY" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DVC_TYP_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DVC_TYP_MNFCTR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DVC_TYP_COST" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_DVC" Relationship="Self.R_1" FromRole="TBL_AT_DVC_TYP" ToRole="TBL_AT_DVC" />
+    <NavigationProperty Name="TBL_AT_DVC_TYP_CAPBLTY" Relationship="Self.R_19" FromRole="TBL_AT_DVC_TYP" ToRole="TBL_AT_DVC_TYP_CAPBLTY" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DVC_TYP_CAPBLTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DVC_TYP_ID" Type="Int32" Nullable="false" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DVC_CAPBLTY_ID" Type="Int32" Nullable="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_DVC_CAPBLTY" Relationship="Self.R_20" FromRole="TBL_AT_DVC_TYP_CAPBLTY" ToRole="TBL_AT_DVC_CAPBLTY" />
+    <NavigationProperty Name="TBL_AT_DVC_TYP" Relationship="Self.R_19" FromRole="TBL_AT_DVC_TYP_CAPBLTY" ToRole="TBL_AT_DVC_TYP" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GPS_PING_TM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="RSSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="DVC_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="TBL_AT_GPS_PING_DATA1" Relationship="Self.R_13" FromRole="TBL_AT_GPS_PING" ToRole="TBL_AT_GPS_PING_DATA1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_MESSAGE_TYPE">
+    <Key>
+      <PropertyRef Name="MESSAGE_ID" />
+    </Key>
+    <Property Name="MESSAGE_ID" Type="Int32" Nullable="false" />
+    <Property Name="MESSAGE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DRCTN">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DRCTN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LONG_DIFF" Type="Int32" />
+    <Property Name="LAT_DIFF" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RFRNC_NBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EVNT_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_TYP_ID" Type="Int32" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE" Relationship="Self.R_16" FromRole="TBL_AT_EVNT" ToRole="TBL_AT_EVNT_STATE" />
+    <NavigationProperty Name="TBL_AT_EVNT_DVC" Relationship="Self.R_4" FromRole="TBL_AT_EVNT" ToRole="TBL_AT_EVNT_DVC" />
+    <NavigationProperty Name="TBL_AT_EVNT_TYP" Relationship="Self.R_6" FromRole="TBL_AT_EVNT" ToRole="TBL_AT_EVNT_TYP" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_DVC">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_DVC_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_DVC_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVE" Type="Boolean" />
+    <Property Name="DVC_ID" Type="Int32" Nullable="false" />
+    <Property Name="EVNT_ID" Type="Int32" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_DVC" Relationship="Self.R_3" FromRole="TBL_AT_EVNT_DVC" ToRole="TBL_AT_DVC" />
+    <NavigationProperty Name="TBL_AT_EVNT" Relationship="Self.R_4" FromRole="TBL_AT_EVNT_DVC" ToRole="TBL_AT_EVNT" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_STATE_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_STATE_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_STATE_TYP_ID" Type="Int32" />
+    <Property Name="EVNT_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT" Relationship="Self.R_16" FromRole="TBL_AT_EVNT_STATE" ToRole="TBL_AT_EVNT" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE_TYP" Relationship="Self.R_10" FromRole="TBL_AT_EVNT_STATE" ToRole="TBL_AT_EVNT_STATE_TYP" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_STATE_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE" Relationship="Self.R_10" FromRole="TBL_AT_EVNT_STATE_TYP" ToRole="TBL_AT_EVNT_STATE" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT" Relationship="Self.R_6" FromRole="TBL_AT_EVNT_TYP" ToRole="TBL_AT_EVNT" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_SHAPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_TYP" Type="Int32" />
+    <Property Name="GEOFENCE_ZNG" Type="Int32" />
+    <Property Name="LOCATION_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_LOCTN" Relationship="Self.R_12" FromRole="TBL_AT_GEOFENCE" ToRole="TBL_AT_LOCTN" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROPERTY" Relationship="Self.R_21" FromRole="TBL_AT_GEOFENCE" ToRole="TBL_AT_GEOFENCE_PROPERTY" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_COOR" Relationship="Self.R_9" FromRole="TBL_AT_GEOFENCE" ToRole="TBL_AT_GEOFENCE_COOR" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_COOR">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_COOR_LONG" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_LAT" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_RADIUS" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_ORDER" Type="Int32" />
+    <Property Name="GEOFENCE_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE" Relationship="Self.R_9" FromRole="TBL_AT_GEOFENCE_COOR" ToRole="TBL_AT_GEOFENCE" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROP_TYP">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_PROP_TYP_NM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_PROP_TYP_INPUT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROPERTY" Relationship="Self.R_23" FromRole="TBL_AT_GEOFENCE_PROP_TYP" ToRole="TBL_AT_GEOFENCE_PROPERTY" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROPERTY">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="GEOFENCE_PROP_TYP_VAL" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_ID" Type="Int32" />
+    <Property Name="GEOFENCE_PROP_TYP_ID" Type="Int32" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE" Relationship="Self.R_21" FromRole="TBL_AT_GEOFENCE_PROPERTY" ToRole="TBL_AT_GEOFENCE" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROP_TYP" Relationship="Self.R_23" FromRole="TBL_AT_GEOFENCE_PROPERTY" ToRole="TBL_AT_GEOFENCE_PROP_TYP" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING_DATA">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="GPS_PING_ID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GPS_PING_DT" Type="DateTime" Precision="3" />
+    <Property Name="GPS_TYP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_STAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_LAT" Type="Double" />
+    <Property Name="GPS_LONG" Type="Double" />
+    <Property Name="GPS_TEMP" Type="Decimal" Precision="14" Scale="1" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="GPS_SGNL_TM" Type="Int32" />
+    <Property Name="GPS_RSSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_SNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CMNT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ORNTN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BLCK_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="GPS_PING_ID" Type="Int32" Nullable="false" />
+    <Property Name="DVC_ID" Type="Int32" />
+    <NavigationProperty Name="TBL_AT_DVC" Relationship="Self.R_28" FromRole="TBL_AT_GPS_PING_DATA" ToRole="TBL_AT_DVC" />
+  </EntityType>
+  <EntityType Name="TBL_AT_LOCTN">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="LOCTN_CD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_TYP" Type="Int32" />
+    <Property Name="COMPANY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_NM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_NM_2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ADDR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ADDR_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_CTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_PSTL_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_CNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ZN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CNTCT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE" Relationship="Self.R_12" FromRole="TBL_AT_LOCTN" ToRole="TBL_AT_GEOFENCE" />
+  </EntityType>
+  <EntityType Name="TBL_AT_PERMISSIONS">
+    <Key>
+      <PropertyRef Name="Permission_Id" />
+    </Key>
+    <Property Name="Permission_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermissionDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PermissionCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PermissionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_ROLES">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IsSysAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SuperRoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TBL_AT_ROLES1" Relationship="Self.FK_roles_super" FromRole="TBL_AT_ROLES" ToRole="TBL_AT_ROLES1" />
+    <NavigationProperty Name="TBL_AT_ROLES2" Relationship="Self.FK_roles_super" FromRole="TBL_AT_ROLES1" ToRole="TBL_AT_ROLES" />
+  </EntityType>
+  <EntityType Name="TBL_AT_STAT">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BATTERY_STAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_AT_USERS">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SystemUserId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Inactive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_AT_DRCTN1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="DRCTN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LONG_DIFF" Type="Int32" />
+    <Property Name="LAT_DIFF" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_NM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RFRNC_NBR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EVNT_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_TYP_ID" Type="Int32" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE1" Relationship="Self.R_161" FromRole="TBL_AT_EVNT1" ToRole="TBL_AT_EVNT_STATE1" />
+    <NavigationProperty Name="TBL_AT_EVNT_DVC1" Relationship="Self.R_41" FromRole="TBL_AT_EVNT1" ToRole="TBL_AT_EVNT_DVC1" />
+    <NavigationProperty Name="TBL_AT_EVNT_TYP1" Relationship="Self.R_61" FromRole="TBL_AT_EVNT1" ToRole="TBL_AT_EVNT_TYP1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_DVC1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_DVC_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_DVC_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="ACTIVE" Type="Boolean" />
+    <Property Name="DVC_ID" Type="Int32" Nullable="false" />
+    <Property Name="EVNT_ID" Type="Int32" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_DVC" Relationship="Self.R_31" FromRole="TBL_AT_EVNT_DVC1" ToRole="TBL_AT_DVC" />
+    <NavigationProperty Name="TBL_AT_EVNT1" Relationship="Self.R_41" FromRole="TBL_AT_EVNT_DVC1" ToRole="TBL_AT_EVNT1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_STATE_STRT_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_STATE_END_TM" Type="DateTime" Precision="3" />
+    <Property Name="EVNT_STATE_TYP_ID" Type="Int32" />
+    <Property Name="EVNT_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT1" Relationship="Self.R_161" FromRole="TBL_AT_EVNT_STATE1" ToRole="TBL_AT_EVNT1" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE_TYP1" Relationship="Self.R_101" FromRole="TBL_AT_EVNT_STATE1" ToRole="TBL_AT_EVNT_STATE_TYP1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_STATE_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_STATE_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT_STATE1" Relationship="Self.R_101" FromRole="TBL_AT_EVNT_STATE_TYP1" ToRole="TBL_AT_EVNT_STATE1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_EVNT_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EVNT_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_EVNT1" Relationship="Self.R_61" FromRole="TBL_AT_EVNT_TYP1" ToRole="TBL_AT_EVNT1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_SHAPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_TYP" Type="Int32" />
+    <Property Name="GEOFENCE_ZNG" Type="Int32" />
+    <Property Name="LOCATION_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_LOCTN1" Relationship="Self.R_121" FromRole="TBL_AT_GEOFENCE1" ToRole="TBL_AT_LOCTN1" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROPERTY1" Relationship="Self.R_211" FromRole="TBL_AT_GEOFENCE1" ToRole="TBL_AT_GEOFENCE_PROPERTY1" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_COOR1" Relationship="Self.R_91" FromRole="TBL_AT_GEOFENCE1" ToRole="TBL_AT_GEOFENCE_COOR1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_COOR1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_COOR_LONG" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_LAT" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_RADIUS" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="GEOFENCE_COOR_ORDER" Type="Int32" />
+    <Property Name="GEOFENCE_ID" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE1" Relationship="Self.R_91" FromRole="TBL_AT_GEOFENCE_COOR1" ToRole="TBL_AT_GEOFENCE1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROP_TYP1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_PROP_TYP_NM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GEOFENCE_PROP_TYP_INPUT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROPERTY1" Relationship="Self.R_231" FromRole="TBL_AT_GEOFENCE_PROP_TYP1" ToRole="TBL_AT_GEOFENCE_PROPERTY1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GEOFENCE_PROPERTY1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="GEOFENCE_PROP_TYP_VAL" Type="Int32" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GEOFENCE_ID" Type="Int32" />
+    <Property Name="GEOFENCE_PROP_TYP_ID" Type="Int32" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE1" Relationship="Self.R_211" FromRole="TBL_AT_GEOFENCE_PROPERTY1" ToRole="TBL_AT_GEOFENCE1" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE_PROP_TYP1" Relationship="Self.R_231" FromRole="TBL_AT_GEOFENCE_PROPERTY1" ToRole="TBL_AT_GEOFENCE_PROP_TYP1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_GPS_PING_DATA1">
+    <Key>
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="GPS_PING_ID" />
+    </Key>
+    <Property Name="IID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DVC_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_PING_DT" Type="DateTime" Precision="3" />
+    <Property Name="GPS_TYP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_STAT" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_LAT" Type="Double" />
+    <Property Name="GPS_LONG" Type="Double" />
+    <Property Name="GPS_TEMP" Type="Decimal" Precision="14" Scale="1" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="GPS_SGNL_TM" Type="Int32" />
+    <Property Name="GPS_RSSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GPS_SNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CMNT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ORNTN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BLCK_TYP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GPS_PING_ID" Type="Int32" Nullable="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GPS_PING" Relationship="Self.R_13" FromRole="TBL_AT_GPS_PING_DATA1" ToRole="TBL_AT_GPS_PING" />
+  </EntityType>
+  <EntityType Name="TBL_AT_LOCTN1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="LOCTN_CD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_TYP" Type="Int32" />
+    <Property Name="COMPANY" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_NM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_NM_2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ADDR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ADDR_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_CTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_PSTL_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_CNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOCTN_ZN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CNTCT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_AT_GEOFENCE1" Relationship="Self.R_121" FromRole="TBL_AT_LOCTN1" ToRole="TBL_AT_GEOFENCE1" />
+  </EntityType>
+  <EntityType Name="TBL_AT_STAT1">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BATTERY_STAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_MODIFY_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_MODIFY_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_AT_MESSAGE_DATA">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MESSAGE_ID" Type="Int32" />
+    <Property Name="VALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VALUE_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STARTHEX" Type="Int32" />
+    <Property Name="STARTBIT" Type="Int32" />
+    <Property Name="ENDHEX" Type="Int32" />
+    <Property Name="ENDBIT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="v_GPS_Ping">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+      <PropertyRef Name="AddedBy" />
+      <PropertyRef Name="ModifyBy" />
+      <PropertyRef Name="IID" />
+      <PropertyRef Name="DeviceName" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="DocumentID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="battery" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Latitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Longitude" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Temperature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="SignalTime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="RSSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SNR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddedBy" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModifyBy" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODIFY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IID" Type="Int32" Nullable="false" />
+    <Property Name="DeviceID" Type="Int32" />
+    <Property Name="DeviceName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="database_firewall_rules">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="start_ip_address" />
+      <PropertyRef Name="end_ip_address" />
+      <PropertyRef Name="create_date" />
+      <PropertyRef Name="modify_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="R_1">
+    <End Role="TBL_AT_DVC_TYP" Type="Self.TBL_AT_DVC_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC">
+        <PropertyRef Name="DVC_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_28">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="0..1" />
+    <End Role="TBL_AT_GPS_PING_DATA" Type="Self.TBL_AT_GPS_PING_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GPS_PING_DATA">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_3">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="1" />
+    <End Role="TBL_AT_EVNT_DVC" Type="Self.TBL_AT_EVNT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_31">
+    <End Role="TBL_AT_DVC" Type="Self.TBL_AT_DVC" Multiplicity="1" />
+    <End Role="TBL_AT_EVNT_DVC1" Type="Self.TBL_AT_EVNT_DVC1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC1">
+        <PropertyRef Name="DVC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_20">
+    <End Role="TBL_AT_DVC_CAPBLTY" Type="Self.TBL_AT_DVC_CAPBLTY" Multiplicity="1" />
+    <End Role="TBL_AT_DVC_TYP_CAPBLTY" Type="Self.TBL_AT_DVC_TYP_CAPBLTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_CAPBLTY">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC_TYP_CAPBLTY">
+        <PropertyRef Name="DVC_CAPBLTY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_19">
+    <End Role="TBL_AT_DVC_TYP" Type="Self.TBL_AT_DVC_TYP" Multiplicity="1" />
+    <End Role="TBL_AT_DVC_TYP_CAPBLTY" Type="Self.TBL_AT_DVC_TYP_CAPBLTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_DVC_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_DVC_TYP_CAPBLTY">
+        <PropertyRef Name="DVC_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_13">
+    <End Role="TBL_AT_GPS_PING" Type="Self.TBL_AT_GPS_PING" Multiplicity="1" />
+    <End Role="TBL_AT_GPS_PING_DATA1" Type="Self.TBL_AT_GPS_PING_DATA1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GPS_PING">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GPS_PING_DATA1">
+        <PropertyRef Name="GPS_PING_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE" Type="Self.TBL_AT_EVNT_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_DVC" Type="Self.TBL_AT_EVNT_DVC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_6">
+    <End Role="TBL_AT_EVNT_TYP" Type="Self.TBL_AT_EVNT_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT" Type="Self.TBL_AT_EVNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT">
+        <PropertyRef Name="EVNT_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_10">
+    <End Role="TBL_AT_EVNT_STATE_TYP" Type="Self.TBL_AT_EVNT_STATE_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE" Type="Self.TBL_AT_EVNT_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_STATE_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE">
+        <PropertyRef Name="EVNT_STATE_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_12">
+    <End Role="TBL_AT_LOCTN" Type="Self.TBL_AT_LOCTN" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_LOCTN">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_21">
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY" Type="Self.TBL_AT_GEOFENCE_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_9">
+    <End Role="TBL_AT_GEOFENCE" Type="Self.TBL_AT_GEOFENCE" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_COOR" Type="Self.TBL_AT_GEOFENCE_COOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_COOR">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_23">
+    <End Role="TBL_AT_GEOFENCE_PROP_TYP" Type="Self.TBL_AT_GEOFENCE_PROP_TYP" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY" Type="Self.TBL_AT_GEOFENCE_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE_PROP_TYP">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY">
+        <PropertyRef Name="GEOFENCE_PROP_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_roles_super">
+    <End Role="TBL_AT_ROLES" Type="Self.TBL_AT_ROLES" Multiplicity="1" />
+    <End Role="TBL_AT_ROLES1" Type="Self.TBL_AT_ROLES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_ROLES">
+        <PropertyRef Name="Role_Id" />
+      </Principal>
+      <Dependent Role="TBL_AT_ROLES1">
+        <PropertyRef Name="SuperRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_161">
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE1" Type="Self.TBL_AT_EVNT_STATE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE1">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_41">
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_DVC1" Type="Self.TBL_AT_EVNT_DVC1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_DVC1">
+        <PropertyRef Name="EVNT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_61">
+    <End Role="TBL_AT_EVNT_TYP1" Type="Self.TBL_AT_EVNT_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT1" Type="Self.TBL_AT_EVNT1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT1">
+        <PropertyRef Name="EVNT_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_101">
+    <End Role="TBL_AT_EVNT_STATE_TYP1" Type="Self.TBL_AT_EVNT_STATE_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_EVNT_STATE1" Type="Self.TBL_AT_EVNT_STATE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_EVNT_STATE_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_EVNT_STATE1">
+        <PropertyRef Name="EVNT_STATE_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_121">
+    <End Role="TBL_AT_LOCTN1" Type="Self.TBL_AT_LOCTN1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_LOCTN1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_211">
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY1" Type="Self.TBL_AT_GEOFENCE_PROPERTY1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY1">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_91">
+    <End Role="TBL_AT_GEOFENCE1" Type="Self.TBL_AT_GEOFENCE1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_COOR1" Type="Self.TBL_AT_GEOFENCE_COOR1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_COOR1">
+        <PropertyRef Name="GEOFENCE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_231">
+    <End Role="TBL_AT_GEOFENCE_PROP_TYP1" Type="Self.TBL_AT_GEOFENCE_PROP_TYP1" Multiplicity="0..1" />
+    <End Role="TBL_AT_GEOFENCE_PROPERTY1" Type="Self.TBL_AT_GEOFENCE_PROPERTY1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_AT_GEOFENCE_PROP_TYP1">
+        <PropertyRef Name="IID" />
+      </Principal>
+      <Dependent Role="TBL_AT_GEOFENCE_PROPERTY1">
+        <PropertyRef Name="GEOFENCE_PROP_TYP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AssetTrackingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_AT_DVC" EntityType="Self.TBL_AT_DVC" />
+    <EntitySet Name="TBL_AT_DVC_CAPBLTY" EntityType="Self.TBL_AT_DVC_CAPBLTY" />
+    <EntitySet Name="TBL_AT_DVC_TYP" EntityType="Self.TBL_AT_DVC_TYP" />
+    <EntitySet Name="TBL_AT_DVC_TYP_CAPBLTY" EntityType="Self.TBL_AT_DVC_TYP_CAPBLTY" />
+    <EntitySet Name="TBL_AT_GPS_PING" EntityType="Self.TBL_AT_GPS_PING" />
+    <EntitySet Name="TBL_AT_MESSAGE_TYPE" EntityType="Self.TBL_AT_MESSAGE_TYPE" />
+    <EntitySet Name="TBL_AT_DRCTN" EntityType="Self.TBL_AT_DRCTN" />
+    <EntitySet Name="TBL_AT_EVNT" EntityType="Self.TBL_AT_EVNT" />
+    <EntitySet Name="TBL_AT_EVNT_DVC" EntityType="Self.TBL_AT_EVNT_DVC" />
+    <EntitySet Name="TBL_AT_EVNT_STATE" EntityType="Self.TBL_AT_EVNT_STATE" />
+    <EntitySet Name="TBL_AT_EVNT_STATE_TYP" EntityType="Self.TBL_AT_EVNT_STATE_TYP" />
+    <EntitySet Name="TBL_AT_EVNT_TYP" EntityType="Self.TBL_AT_EVNT_TYP" />
+    <EntitySet Name="TBL_AT_GEOFENCE" EntityType="Self.TBL_AT_GEOFENCE" />
+    <EntitySet Name="TBL_AT_GEOFENCE_COOR" EntityType="Self.TBL_AT_GEOFENCE_COOR" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROP_TYP" EntityType="Self.TBL_AT_GEOFENCE_PROP_TYP" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROPERTY" EntityType="Self.TBL_AT_GEOFENCE_PROPERTY" />
+    <EntitySet Name="TBL_AT_GPS_PING_DATA" EntityType="Self.TBL_AT_GPS_PING_DATA" />
+    <EntitySet Name="TBL_AT_LOCTN" EntityType="Self.TBL_AT_LOCTN" />
+    <EntitySet Name="TBL_AT_PERMISSIONS" EntityType="Self.TBL_AT_PERMISSIONS" />
+    <EntitySet Name="TBL_AT_ROLES" EntityType="Self.TBL_AT_ROLES" />
+    <EntitySet Name="TBL_AT_STAT" EntityType="Self.TBL_AT_STAT" />
+    <EntitySet Name="TBL_AT_USERS" EntityType="Self.TBL_AT_USERS" />
+    <EntitySet Name="TBL_AT_DRCTN1" EntityType="Self.TBL_AT_DRCTN1" />
+    <EntitySet Name="TBL_AT_EVNT1" EntityType="Self.TBL_AT_EVNT1" />
+    <EntitySet Name="TBL_AT_EVNT_DVC1" EntityType="Self.TBL_AT_EVNT_DVC1" />
+    <EntitySet Name="TBL_AT_EVNT_STATE1" EntityType="Self.TBL_AT_EVNT_STATE1" />
+    <EntitySet Name="TBL_AT_EVNT_STATE_TYP1" EntityType="Self.TBL_AT_EVNT_STATE_TYP1" />
+    <EntitySet Name="TBL_AT_EVNT_TYP1" EntityType="Self.TBL_AT_EVNT_TYP1" />
+    <EntitySet Name="TBL_AT_GEOFENCE1" EntityType="Self.TBL_AT_GEOFENCE1" />
+    <EntitySet Name="TBL_AT_GEOFENCE_COOR1" EntityType="Self.TBL_AT_GEOFENCE_COOR1" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROP_TYP1" EntityType="Self.TBL_AT_GEOFENCE_PROP_TYP1" />
+    <EntitySet Name="TBL_AT_GEOFENCE_PROPERTY1" EntityType="Self.TBL_AT_GEOFENCE_PROPERTY1" />
+    <EntitySet Name="TBL_AT_GPS_PING_DATA1" EntityType="Self.TBL_AT_GPS_PING_DATA1" />
+    <EntitySet Name="TBL_AT_LOCTN1" EntityType="Self.TBL_AT_LOCTN1" />
+    <EntitySet Name="TBL_AT_STAT1" EntityType="Self.TBL_AT_STAT1" />
+    <EntitySet Name="TBL_AT_MESSAGE_DATA" EntityType="Self.TBL_AT_MESSAGE_DATA" />
+    <EntitySet Name="v_GPS_Ping" EntityType="Self.v_GPS_Ping" />
+    <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+    <AssociationSet Name="R_1" Association="Self.R_1">
+      <End Role="TBL_AT_DVC_TYP" EntitySet="TBL_AT_DVC_TYP" />
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_28" Association="Self.R_28">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_GPS_PING_DATA" EntitySet="TBL_AT_GPS_PING_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="R_3" Association="Self.R_3">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_EVNT_DVC" EntitySet="TBL_AT_EVNT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_31" Association="Self.R_31">
+      <End Role="TBL_AT_DVC" EntitySet="TBL_AT_DVC" />
+      <End Role="TBL_AT_EVNT_DVC1" EntitySet="TBL_AT_EVNT_DVC1" />
+    </AssociationSet>
+    <AssociationSet Name="R_20" Association="Self.R_20">
+      <End Role="TBL_AT_DVC_CAPBLTY" EntitySet="TBL_AT_DVC_CAPBLTY" />
+      <End Role="TBL_AT_DVC_TYP_CAPBLTY" EntitySet="TBL_AT_DVC_TYP_CAPBLTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_19" Association="Self.R_19">
+      <End Role="TBL_AT_DVC_TYP" EntitySet="TBL_AT_DVC_TYP" />
+      <End Role="TBL_AT_DVC_TYP_CAPBLTY" EntitySet="TBL_AT_DVC_TYP_CAPBLTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_13" Association="Self.R_13">
+      <End Role="TBL_AT_GPS_PING" EntitySet="TBL_AT_GPS_PING" />
+      <End Role="TBL_AT_GPS_PING_DATA1" EntitySet="TBL_AT_GPS_PING_DATA1" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="Self.R_16">
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+      <End Role="TBL_AT_EVNT_STATE" EntitySet="TBL_AT_EVNT_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="Self.R_4">
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+      <End Role="TBL_AT_EVNT_DVC" EntitySet="TBL_AT_EVNT_DVC" />
+    </AssociationSet>
+    <AssociationSet Name="R_6" Association="Self.R_6">
+      <End Role="TBL_AT_EVNT_TYP" EntitySet="TBL_AT_EVNT_TYP" />
+      <End Role="TBL_AT_EVNT" EntitySet="TBL_AT_EVNT" />
+    </AssociationSet>
+    <AssociationSet Name="R_10" Association="Self.R_10">
+      <End Role="TBL_AT_EVNT_STATE_TYP" EntitySet="TBL_AT_EVNT_STATE_TYP" />
+      <End Role="TBL_AT_EVNT_STATE" EntitySet="TBL_AT_EVNT_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="R_12" Association="Self.R_12">
+      <End Role="TBL_AT_LOCTN" EntitySet="TBL_AT_LOCTN" />
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+    </AssociationSet>
+    <AssociationSet Name="R_21" Association="Self.R_21">
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY" EntitySet="TBL_AT_GEOFENCE_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="R_9" Association="Self.R_9">
+      <End Role="TBL_AT_GEOFENCE" EntitySet="TBL_AT_GEOFENCE" />
+      <End Role="TBL_AT_GEOFENCE_COOR" EntitySet="TBL_AT_GEOFENCE_COOR" />
+    </AssociationSet>
+    <AssociationSet Name="R_23" Association="Self.R_23">
+      <End Role="TBL_AT_GEOFENCE_PROP_TYP" EntitySet="TBL_AT_GEOFENCE_PROP_TYP" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY" EntitySet="TBL_AT_GEOFENCE_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_roles_super" Association="Self.FK_roles_super">
+      <End Role="TBL_AT_ROLES" EntitySet="TBL_AT_ROLES" />
+      <End Role="TBL_AT_ROLES1" EntitySet="TBL_AT_ROLES" />
+    </AssociationSet>
+    <AssociationSet Name="R_161" Association="Self.R_161">
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+      <End Role="TBL_AT_EVNT_STATE1" EntitySet="TBL_AT_EVNT_STATE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_41" Association="Self.R_41">
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+      <End Role="TBL_AT_EVNT_DVC1" EntitySet="TBL_AT_EVNT_DVC1" />
+    </AssociationSet>
+    <AssociationSet Name="R_61" Association="Self.R_61">
+      <End Role="TBL_AT_EVNT_TYP1" EntitySet="TBL_AT_EVNT_TYP1" />
+      <End Role="TBL_AT_EVNT1" EntitySet="TBL_AT_EVNT1" />
+    </AssociationSet>
+    <AssociationSet Name="R_101" Association="Self.R_101">
+      <End Role="TBL_AT_EVNT_STATE_TYP1" EntitySet="TBL_AT_EVNT_STATE_TYP1" />
+      <End Role="TBL_AT_EVNT_STATE1" EntitySet="TBL_AT_EVNT_STATE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_121" Association="Self.R_121">
+      <End Role="TBL_AT_LOCTN1" EntitySet="TBL_AT_LOCTN1" />
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+    </AssociationSet>
+    <AssociationSet Name="R_211" Association="Self.R_211">
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY1" EntitySet="TBL_AT_GEOFENCE_PROPERTY1" />
+    </AssociationSet>
+    <AssociationSet Name="R_91" Association="Self.R_91">
+      <End Role="TBL_AT_GEOFENCE1" EntitySet="TBL_AT_GEOFENCE1" />
+      <End Role="TBL_AT_GEOFENCE_COOR1" EntitySet="TBL_AT_GEOFENCE_COOR1" />
+    </AssociationSet>
+    <AssociationSet Name="R_231" Association="Self.R_231">
+      <End Role="TBL_AT_GEOFENCE_PROP_TYP1" EntitySet="TBL_AT_GEOFENCE_PROP_TYP1" />
+      <End Role="TBL_AT_GEOFENCE_PROPERTY1" EntitySet="TBL_AT_GEOFENCE_PROPERTY1" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

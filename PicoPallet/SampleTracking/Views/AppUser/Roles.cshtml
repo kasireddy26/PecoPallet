@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SampleTracking.role>
+
+
+    @{
+        ViewBag.Title = "Roles";
+      
+    }
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Roles</title>
+
+   
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "CreateRole","AppUser")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleDescription)
+            </th>
+         
+            <th>
+                Actions
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoleDescription)
+            </td>
+           
+            <td style="color:white;">
+                @Html.ActionLink("Edit", "Role","AppUser",new { id = item.Role_Id },null)|
+          
+              @*   @Html.ActionLink("Delete", "Delete", new { id=item.Role_Id })  *@    
+            </td>
+        </tr>
+    }
+    
+    </table>
+
+    
+ 
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿
+
+    @{
+        ViewBag.Title = "CreateUser";
+        Layout = "~/Views/Shared/_NewLayout.cshtml";
+    }
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateRole</title>
+    <script type="text/javascript" src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+<script type="text/javascript">
+    
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http,$window) {
+        $scope.RoleName = "";
+        $scope.RoleDesc = "";
+        $scope.status = "";
+        $scope.CreateRole = function () {
+            if ($scope.RoleName === "" || $scope.RoleDesc === "")
+                return;
+            var role = { "RoleName": $scope.RoleName, "RoleDescription": $scope.RoleDesc };
+            console.log(role);
+            $http({
+                method: 'POST',
+                url: '/api/Roles/Create',
+                data:JSON.stringify(role)
+            }).then(function successCallback(response) {
+                // this callback will be called asynchronously
+                // when the response is available
+                console.log(response);
+                var Id = response.data.Id;
+                $scope.status = "Success";
+                $window.location.href = '/AppUser/Role/'+Id;
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(response);
+                $scope.status = "Error";
+            });
+        };
+    });
+</script>
+
+    <style>
+        #RoleContainer{
+            border: dotted 2px red;
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div id="RoleContainer"> 
+        <label for="RoleName">Role Name</label>
+        <input type="text" id="RoleName" ng-model="RoleName" required /><br/>
+        <label for="RoleDescription">Role Description</label>
+        <input type="text" id="RoleDescription" ng-model="RoleDesc" required /><br/>
+        <button ng-click="CreateRole()">Create Role</button><br/>
+        <div>{{status}}</div>
+    </div>
+
+
+</body>
+</html>

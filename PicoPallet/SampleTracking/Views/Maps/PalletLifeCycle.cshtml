@@ -1,0 +1,343 @@
+﻿
+@{
+    ViewBag.Title = "PalletLifeCycle";
+    
+}
+
+<h2>PalletLifeCycle</h2>
+
+
+
+<div id="main" role="main">
+    <div id="content" class="container">
+        <div class="row">
+            <div style="width:1500px; height:1200px; margin-left: -100px;margin-top: -40px; position:absolute;">
+                <div id="usamap"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var circleRadius = 10;
+    var arcStrokeWidth = 4;
+
+    var election = new Datamap({
+        scope: 'usa',
+        height: 800,
+        element: document.getElementById('usamap'),
+        geographyConfig: {
+            highlightBorderColor: '#bada55',
+            popupTemplate: function (geography, data) {
+                return '<div class="hoverinfo">' + geography.properties.name + ' '
+            },
+            highlightBorderWidth: 3
+        },
+
+        fills: {
+            defaultFill: '#A9C0DE',
+            red: 'red',
+            green: 'green',
+            purple: '#800080'
+        },
+        data: {
+        }
+    });
+    election.labels();
+
+
+    election.arc([
+      //Route 1
+      {
+          origin: {
+              latitude: 40.147524,
+              longitude: -122.049239
+          },
+          destination: {
+              latitude: 33.799838,
+              longitude: -116.204512
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'green'
+          }
+      },
+      {
+          origin: {
+              latitude: 33.799838,
+              longitude: -116.204512
+          },
+          destination: {
+              latitude: 33.507197,
+              longitude: -112.073653
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'red'
+          }
+      },
+//Route 2
+      {
+          origin: {
+              latitude: 32.69999,
+              longitude: -112.802667
+          },
+          destination: {
+              latitude: 32.789732,
+              longitude: -96.835616
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'green'
+          }
+      },
+      {
+          origin: {
+              latitude: 32.789732,
+              longitude: -96.835616
+          },
+          destination: {
+              latitude: 29.785987,
+              longitude: -95.363448
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'red'
+          }
+      },
+      {
+          origin: {
+              latitude: 29.785987,
+              longitude: -95.363448
+          },
+          destination: {
+              latitude: 30.299542,
+              longitude: -97.736495
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'purple'
+          }
+      },
+      {
+          origin: {
+              latitude: 30.299542,
+              longitude: -97.736495
+          },
+          destination: {
+              latitude: 32.789732,
+              longitude: -96.835616
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'green'
+          }
+      },
+//Route 3
+      {
+          origin: {
+              latitude: 32.789732,
+              longitude: -96.835616
+          },
+          destination: {
+              latitude: 37.221578,
+              longitude: -93.278972
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'purple'
+          }
+      },
+      {
+          origin: {
+              latitude: 37.221578,
+              longitude: -93.278972
+          },
+          destination: {
+              latitude: 40.128489,
+              longitude: -88.298294
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'green'
+          }
+      },
+      {
+          origin: {
+              latitude: 40.128489,
+              longitude: -88.298294
+          },
+          destination: {
+              latitude: 39.776913,
+              longitude: -86.155870
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'red'
+          }
+      },
+    //Route 4
+      {
+          origin: {
+              latitude: 39.174820,
+              longitude: -86.545884
+          },
+          destination: {
+              latitude: 40.268174,
+              longitude: -76.910875
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'green'
+          }
+      },
+      {
+          origin: {
+              latitude: 40.268174,
+              longitude: -76.910875
+          },
+          destination: {
+              latitude: 41.059851,
+              longitude: -73.549058
+          },
+          options: {
+              strokeWidth: arcStrokeWidth,
+              strokeColor: 'red'
+          }
+      }
+
+    ], { strokeWidth: arcStrokeWidth, arcSharpness: 0 });
+
+    election.bubbles([
+        //Route 1
+{
+    radius: circleRadius,
+    fillKey: 'purple',
+    header: 'California 1',
+    zipcode: 50000,
+    data1: ' some data 1',
+    latitude: 40.147524,
+    longitude: -122.049239
+},
+{
+    radius: circleRadius,
+    fillKey: 'green',
+    header: 'California 2',
+    zipcode: 50001,
+    data1: 'some data 2',
+    latitude: 33.799838,
+    longitude: -116.204512
+},
+{
+    radius: circleRadius,
+    fillKey: 'red',
+    header: 'Arizona 1',
+    zipcode: 70001,
+    data1: 'some data 3',
+    latitude: 33.507197,
+    longitude: -112.073653
+},
+//Route 2
+{
+    radius: circleRadius,
+    fillKey: 'purple',
+    header: 'Arizona 2',
+    zipcode: 70002,
+    data1: 'some data 4',
+    latitude: 32.69999,
+    longitude: -112.802667
+},
+{
+    radius: circleRadius,
+    fillKey: 'green',
+    header: 'Dallas',
+    zipcode: 75235,
+    data1: 'some data234',
+    latitude: 32.789732,
+    longitude: -96.835616
+},
+{
+    radius: circleRadius,
+    fillKey: 'red',
+    header: 'Houston',
+    zipcode: 77009,
+    data1: 'some data234',
+    latitude: 29.785987,
+    longitude: -95.363448
+},
+{
+    radius: circleRadius,
+    fillKey: 'purple',
+    header: 'Austin',
+    zipcode: 78705,
+    data1: 'some data234',
+    latitude: 30.299542,
+    longitude: -97.736495
+},
+//Route 3
+{
+    radius: circleRadius,
+    fillKey: 'purple',
+    header: 'Springfield',
+    zipcode: 65802,
+    data1: 'some data',
+    latitude: 37.221578,
+    longitude: -93.278972
+},
+{
+    radius: circleRadius,
+    fillKey: 'green',
+    header: 'Champaign',
+    zipcode: 61822,
+    data1: 'some data11',
+    latitude: 40.128489,
+    longitude: -88.298294
+},
+{
+    radius: circleRadius,
+    fillKey: 'red',
+    header: 'Indianapolis',
+    zipcode: 46204,
+    data1: 'some data234',
+    latitude: 39.776913,
+    longitude: -86.155870
+},
+//Route 4
+{
+    radius: circleRadius,
+    fillKey: 'purple',
+    header: 'Bloomington',
+    zipcode: 47404,
+    data1: 'some data',
+    latitude: 39.174820,
+    longitude: -86.545884
+},
+{
+    radius: circleRadius,
+    fillKey: 'green',
+    header: 'Harrisburg',
+    zipcode: 17043,
+    data1: 'some data11',
+    latitude: 40.268174,
+    longitude: -76.910875
+},
+{
+    radius: circleRadius,
+    fillKey: 'red',
+    header: 'Stamford',
+    zipcode: 06902,
+    data1: 'some data234',
+    latitude: 41.059851,
+    longitude: -73.549058
+}
+    ], {
+        popupTemplate: function (geo, data) {
+            return '<div class="hoverinfo">' + data.header
+                + '<br/><hr>'
+                + 'Zip: ' + data.zipcode + '<br/>'
+                + 'Data: ' + data.data1 + ' '
+        }
+    });
+</script>
+

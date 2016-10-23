@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23965da28b0d494eb49207975eedd7d4" Name="Diagram1">
+        <EntityTypeShape EntityType="AssetTrackingModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssetTrackingModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssetTrackingModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssetTrackingModel.AspNetUserLogin" Width="2.25" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssetTrackingModel.AspNetUser" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AssetTrackingModel.Tbl_AT_GPSPings" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="AssetTrackingModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AssetTrackingModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="AssetTrackingModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AssetTrackingModel.pingdataview" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="AssetTrackingModel.role" Width="1.5" PointX="7.375" PointY="8.5" />
+        <EntityTypeShape EntityType="AssetTrackingModel.user" Width="1.5" PointX="9.625" PointY="9.375" />
+        <AssociationConnector Association="AssetTrackingModel.FK_roles_super" />
+        <AssociationConnector Association="AssetTrackingModel.lnk_user_role" />
+        <EntityTypeShape EntityType="AssetTrackingModel.permission" Width="1.5" PointX="5.125" PointY="11.375" />
+        <AssociationConnector Association="AssetTrackingModel.lnk_role_permission1" />
+        <AssociationConnector Association="AssetTrackingModel.lnk_user_permission_spl1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

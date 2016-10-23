@@ -1,0 +1,72 @@
+﻿
+    <div id="main" role="main">
+
+        <!-- MAIN CONTENT -->
+        <div id="content" class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 hidden-xs hidden-sm">
+                    <h1 class="txt-color-red login-header-big">Tracking Pallet Flows</h1>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <p>
+                                The PECO Service Team ensures timely reporting and tracking of pallet movements throughout the rental cycle, and our 
+                                regionally-based service managers conduct regular audits to verify inventory counts and maximize pallet utilization. 
+                                Service Team representatives also make frequent on-site visits to observe warehouse activity and make recommendations.
+                                They provide support for PECO's powerful online tool, Red<>Link™, and work with customers to analyze dwell times and suggest 
+                                ways to improve efficiency and cut costs.
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 hide">
+                            <h5 class="about-heading"></h5>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="well no-padding">
+                        <form  id="login-form" class="smart-form client-form">
+                            <header>
+                                Login
+                            </header>
+
+                            <fieldset>
+
+                                <section>
+                                    <label class="label">E-mail</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-user"></i>
+                                        <input type="text" name="email" data-ng-model="loginData.USER_Name" required autofocus>
+                                        <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter username</b>
+                                    </label>
+                                </section>
+
+                                <section>
+                                    <label class="label">Password</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-lock"></i>
+                                        <input type="password" name="password" data-ng-model="loginData.USER_Password" required>
+                                        <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                                    </label>
+                                    <div class="note">
+                                        <a href="forgotpassword.html">Forgot password?</a>
+                                    </div>
+                                </section>
+                            </fieldset>
+                            <footer>                                
+                                <button type="submit" class="btn btn-md btn-info btn-block" data-ng-click="login()">
+                                    LOGIN
+                                </button>                               
+                            </footer>
+                            <div data-ng-hide="message == ''" class="alert alert-danger">
+                                {{message}}
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

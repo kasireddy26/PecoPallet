@@ -1,0 +1,87 @@
+﻿<div class="row">
+    <div id="paper-top">
+        <div class="col-sm-3">
+            <h2 class="tittle-content-header">
+                <i class="icon-window"></i>
+                <span>
+                    Notification
+                </span>
+            </h2>
+        </div>
+        <div class="col-sm-9">
+            <div class="devider-vertical visible-lg"></div>
+            <div class="tittle-middle-header">
+                <div class="alert">
+                    <span class="tittle-alert entypo-info-circled"></span>
+                    Write something about Notification page.....&nbsp;
+                    <strong></strong>&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="breadcrumb" style="margin:10px;">
+    <li>
+        <a href="#/">
+            <span class="entypo-home"></span>
+        </a>
+    </li>
+    <li>
+        <i class="fa fa-lg fa-angle-right"></i>
+    </li>
+    <li>
+        <a href="#" title="Sample page 1">Notification</a>
+    </li>
+</ul>
+<div>
+    <div id="Div0" ng-show="showNotDiv" style="padding: 0 0 0 0; margin-left: 0px; margin-top: 20px">
+        <h4 class="txt-color-red login-header-big" style="color:black">Asset route</h4>
+        <br />
+        <div id='mapdiv1' ng-init="getMap()" style="position: relative; width: 1200px; height: 600px;"></div>
+    </div>
+    <div id="Div1" ng-show="showPushDiv" style="padding: 0 0 0 0; margin-left: 0px; margin-top: 20px">
+        <h4 class="txt-color-red login-header-big" style="color:black">Pallet current location</h4>
+        <br />
+        <div id='mapdiv2' ng-init="getMap2()" style="position: relative; width: 1200px; height: 600px;"></div>
+    </div>
+
+    <div style="margin-top: 0px;margin-left: 0px;color:black">
+        <h3>Asset tracking data</h3>
+        Search:
+        <input type="text" ng-model="searchText" style="color:black" />
+        <!-- <br />
+                       Selection:
+        <span id="selectedRows">
+        </span>
+                    <div id="myGrid" style="height: 100%;" class="ag-fresh"></div>
+                    <br />-->
+        <table border="1" class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Action Item</th>
+                    <th>Track Route</th>
+                    <th>Location Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in mapsData | filter:searchText" ng-click="clickNotification(item)">
+                    <td>{{item.item}}</td>
+                    <td>{{item.route}}</td>
+                    <td>{{item.point}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!--                        <tr ng-click="clickNotification()">
+                            <td>Notification</td>
+                            <td>Seattle > Tacoma > Olympia</td>
+                            <td>47.043050, -122.888117</td>
+                        </tr>
+                        <tr ng-click="clickPushpin()">
+                            <td>Pallet Location</td>
+                            <td>Atlanta</td>
+                            <td>33.792692, -84.394327</td>
+                        </tr>-->

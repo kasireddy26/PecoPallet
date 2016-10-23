@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed34e06f14eb49d980358cde94f39a84" Name="Diagram1">
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DVC" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DVC_CAPBLTY" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DVC_TYP" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DVC_TYP_CAPBLTY" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GPS_PING" Width="1.5" PointX="8.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_MESSAGE_TYPE" Width="1.5" PointX="7.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DRCTN" Width="1.5" PointX="10.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_DVC" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_STATE" Width="1.5" PointX="8.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_STATE_TYP" Width="1.5" PointX="6" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_TYP" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE" Width="1.5" PointX="13" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_COOR" Width="1.5" PointX="15.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_PROP_TYP" Width="1.5" PointX="16" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_PROPERTY" Width="1.5" PointX="18.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GPS_PING_DATA" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_LOCTN" Width="1.5" PointX="10.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_PERMISSIONS" Width="1.5" PointX="12.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_ROLES" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_STAT" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_USERS" Width="1.5" PointX="2.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_DRCTN1" Width="1.5" PointX="13.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT1" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_DVC1" Width="1.5" PointX="8.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_STATE1" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_STATE_TYP1" Width="1.5" PointX="6" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_EVNT_TYP1" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE1" Width="1.5" PointX="13" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_COOR1" Width="1.5" PointX="15.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_PROP_TYP1" Width="1.5" PointX="16" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GEOFENCE_PROPERTY1" Width="1.5" PointX="18.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_GPS_PING_DATA1" Width="1.5" PointX="11" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_LOCTN1" Width="1.5" PointX="10.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_STAT1" Width="1.5" PointX="15.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.TBL_AT_MESSAGE_DATA" Width="1.5" PointX="17.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.v_GPS_Ping" Width="1.5" PointX="19.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IOT_AT_DEVModel.database_firewall_rules" Width="1.5" PointX="19.75" PointY="21.25" IsExpanded="true" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_1" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_28" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_3" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_31" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_20" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_19" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_13" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_16" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_4" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_6" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_10" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_12" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_21" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_9" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_23" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.FK_roles_super" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_161" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_41" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_61" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_101" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_121" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_211" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_91" ManuallyRouted="false" />
+        <AssociationConnector Association="IOT_AT_DEVModel.R_231" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
